@@ -1,0 +1,803 @@
+{
+  "categories": [
+    {
+      "id": "electronics",
+      "name": "Electronics & Home Appliances",
+      "description": "Essential electronics and appliances for your home",
+      "image": "electronics-category.jpg",
+      "products": [
+        {
+          "id": "e001",
+          "name": "Smart LED TV - 55 inch",
+          "description": "Ultra HD Smart TV with built-in streaming apps and crystal clear display",
+          "price": 49999,
+          "discount": 52000,
+          "stock": 18,
+          "rating": 4.5,
+          "images": "https://m.media-amazon.com/images/I/915+sXcUY+L.jpg",
+          "specifications": {
+            "brand": "SONY",
+            "resolution": "3840 x 2160",
+            "refreshRate": "60Hz",
+            "smartFeatures": "Voice control, streaming apps",
+            "ports": "3 HDMI, 2 USB"
+          },
+          "tags": ["tv", "smart tv", "4k", "home entertainment"]
+        },
+        {
+          "id": "e002",
+          "name": "Split AC - 1.5 Ton",
+          "description": "Energy-efficient air conditioner with cooling and heating modes",
+          "price": 29000,
+          "discount": 32000,
+          "stock": 15,
+          "rating": 4.6,
+          "images": "https://m.media-amazon.com/images/I/51CCaCYY50L.jpg",
+          "specifications": {
+            "brand": "Godrej",
+            "capacity": "1.5 Ton",
+            "energyRating": "5 Star",
+            "features": "Sleep mode, auto restart, remote control",
+            "coverage": "Up to 180 sq.ft."
+          },
+          "tags": ["air conditioner", "cooling", "home appliance", "summer"]
+        },
+        {
+          "id": "e003",
+          "name": "Front Load Washing Machine",
+          "description": "Fully automatic washing machine with multiple wash programs",
+          "price": 39999,
+          "discount": 45000,
+          "stock": 22,
+          "rating": 4.4,
+          "images": "https://images.jdmagicbox.com/comp/def_content_category/washing-machine-dealers-bosch/bosch-wat24464in-fully-automatic-front-load-washing-machine-8-kg-silver-washing-machine-dealers-bosch-7-9bk30.jpg",
+          "specifications": {
+            "brand": "Bosch",
+            "capacity": "8 kg",
+            "type": "Front Load",
+            "programs": "15 wash programs",
+            "features": "Steam wash, quick wash, child lock"
+          },
+          "tags": ["washing machine", "laundry", "home appliance", "cleaning"]
+        },
+        {
+          "id": "e004",
+          "name": "Microwave Oven - Convection",
+          "description": "Versatile microwave with convection and grill functions",
+          "price": 4999,
+          "discount": 6000,
+          "stock": 25,
+          "rating": 4.3,
+          "images": "https://images.jdmagicbox.com/quickquotes/images_main/lg-microwave-oven-2-12-2022-017-272327272-popjqpev.jpg",
+          "specifications": {
+            "brand": "LG",
+            "capacity": "28 liters",
+            "type": "Convection",
+            "power": "900W microwave, 1500W convection",
+            "features": "Auto-cook menus, defrost, child lock"
+          },
+          "tags": ["microwave", "cooking", "kitchen appliance", "convection"]
+        },
+        {
+          "id": "e005",
+          "name": "Refrigerator - Double Door",
+          "description": "Energy efficient double door refrigerator with large capacity",
+          "price": 32000,
+          "discount":35000 ,
+          "stock": 14,
+          "rating": 4.7,
+          "images": "https://www.bajajmall.in/emistore/media/catalog/product/custom/140x200/SAMSUNG236L2STARDOUBLEDOORREFRIGERATORELEGANTINOXRT28C3042S8HL.jpg",
+          "specifications": {
+            "brand": "Bajaj",
+            "capacity": "380 liters",
+            "type": "Double Door",
+            "energyRating": "4 Star",
+            "features": "Frost-free, digital temperature control, multi airflow system"
+          },
+          "tags": ["refrigerator", "fridge", "cooling", "kitchen appliance"]
+        },
+        {
+          "id": "e006",
+          "name": "Water Purifier - RO+UV",
+          "description": "Advanced water purification system with multiple filtration stages",
+          "price": 3990,
+          "discount": 5000,
+          "stock": 30,
+          "rating": 4.5,
+          "images": "https://images.jdmagicbox.com/quickquotes/images_main/dr-aquapure-reverse-osmosis-system-ro-uv-uf-tds-cu-alk-water-purifier-2218888659-ryzxoj1u.jpg",
+          "specifications": {
+            "brand": "AquaPure",
+            "purification": "RO+UV+UF+TDS",
+            "capacity": "10 liters",
+            "stages": "7-stage filtration",
+            "features": "Digital display, filter change indicator"
+          },
+          "tags": ["water purifier", "filter", "ro", "home appliance"]
+        }
+      ]
+    },
+    {
+      "id": "furniture",
+      "name": "Furniture",
+      "description": "Stylish and comfortable furniture for every room",
+      "image": "furniture-category.jpg",
+      "products": [
+        {
+          "id": "f001",
+          "name": "Mid-Century Modern Sofa",
+          "description": "Elegant 3-seater sofa with soft fabric upholstery and wooden legs",
+          "price": 27999,
+          "discount": 35599,
+          "stock": 12,
+          "rating": 4.6,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ11Iuh7RPVZ49TXNN4mD53TOb5Nu4BhcJxg&s",
+          "specifications": {
+            "brand": "",
+            "material": "Premium polyester fabric",
+            "dimensions": "82\" W x 34\" D x 32\" H",
+            "color": ["Grey", "Blue", "Beige"],
+            "assembly": "Minimal assembly required"
+          },
+          "tags": ["sofa", "living room", "mid-century", "seating"]
+        },
+        {
+          "id": "f002",
+          "name": "Queen Size Platform Bed Frame",
+          "description": "Sturdy wooden bed frame with headboard and under-bed storage",
+          "price": 16000,
+          "discount": 20000,
+          "stock": 18,
+          "rating": 4.5,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuzKrTuHFBKYEocyvH82qZSvbs7G-arBkXnBzCZHjQpml3cpf3wBsvYcqbzWTTeVpCPao&usqp=CAU",
+          "specifications": {
+            "brand": "",
+            "material": "Solid wood and engineered wood",
+            "dimensions": "63\" W x 84\" L x 45\" H",
+            "weight capacity": "800 lbs",
+            "color": ["Walnut", "Oak", "White"]
+          },
+          "tags": ["bed", "bedroom", "platform", "storage"]
+        },
+        {
+          "id": "f003",
+          "name": "Adjustable Office Chair",
+          "description": "Ergonomic office chair with lumbar support and adjustable height",
+          "price": 6999,
+          "discount": 10000,
+          "stock": 25,
+          "rating": 4.4,
+          "images": "https://rukminim2.flixcart.com/image/850/1000/xif0q/office-study-chair/u/t/w/1-pp-polypropylene-61-ergofit-ergonomic-office-chair-in-high-original-imah7egsrpkkjxs4.jpeg?q=20&crop=false",
+          "specifications": {
+            "brand": "",
+            "material": "Mesh back and padded seat",
+            "adjustability": "Height, tilt, armrests",
+            "weight capacity": "300 lbs",
+            "color": ["Black", "Grey"]
+          },
+          "tags": ["chair", "office", "ergonomic", "desk"]
+        },
+        {
+          "id": "f004",
+          "name": "Coffee Table with Storage",
+          "description": "Modern coffee table with lift-top and hidden storage compartment",
+          "price": 5999,
+          "discount": 8000,
+          "stock": 14,
+          "rating": 4.3,
+          "images": "https://images-cdn.ubuy.co.in/667d2c3936d2cc0685700b74-churanty-gold-round-nesting-coffee-table.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "Engineered wood with veneer finish",
+            "dimensions": "40\" W x 24\" D x 18\" H",
+            "color": ["Espresso", "White", "Oak"],
+            "features": "Lift-top mechanism, storage drawer"
+          },
+          "tags": ["table", "coffee table", "living room", "storage"]
+        },
+        {
+          "id": "f005",
+          "name": "5-Shelf Bookcase",
+          "description": "Versatile bookshelf with 5 shelves for books and display items",
+          "price": 8000,
+          "discount": 10000,
+          "stock": 32,
+          "rating": 4.2,
+          "images": "https://assets.wfcdn.com/im/73215612/compr-r85/1769/176924087/doyno-tall-5-shelf-bookcase-storage-and-display-bookshelf-for-home-office-and-living-room.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "Engineered wood",
+            "dimensions": "30\" W x 12\" D x 72\" H",
+            "weight capacity": "30 lbs per shelf",
+            "color": ["Black", "White", "Brown"]
+          },
+          "tags": ["bookcase", "shelf", "storage", "display"]
+        },
+        {
+          "id": "f006",
+          "name": "Dining Table Set - 6 Chairs",
+          "description": "Complete dining set with table and 6 matching chairs",
+          "price": 16999,
+          "discount": 22500,
+          "stock": 8,
+          "rating": 4.7,
+          "images": "https://www.getmycouch.com/cdn/shop/files/H36be0868ae974119ac44f0b4669fd3c_1e3293eb-9753-4fe2-9f78-408c641c27f0.jpg?v=1716650324",
+          "specifications": {
+            "brand": "",
+            "material": "Solid wood with fabric chairs",
+            "dimensions": "72\" L x 42\" W x 30\" H",
+            "seating": "6 people",
+            "color": ["Cherry", "Espresso", "Grey"]
+          },
+          "tags": ["dining", "table", "chairs", "kitchen"]
+        }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen & Dining",
+      "description": "Essential tools and accessories for your kitchen",
+      "image": "kitchen-category.jpg",
+      "products": [
+        {
+          "id": "k001",
+          "name": "Stainless Steel Cookware Set",
+          "description": "10-piece cookware set including pots, pans, and lids",
+          "price": 3999,
+          "discount": 5000,
+          "stock": 20,
+          "rating": 4.6,
+          "images": "https://hestanculinary.com/cdn/shop/files/60034_HES_HN1_10_Piece_Set_Titanium_1_Lifestyle_2.webp?v=1731011180&width=1080",
+          "specifications": {
+            "brand": "",
+            "material": "18/10 Stainless Steel",
+            "pieces": "10 pieces",
+            "dishwasherSafe": true,
+            "inductionCompatible": true
+          },
+          "tags": ["cookware", "pots", "pans", "kitchen"]
+        },
+        {
+          "id": "k002",
+          "name": "Stand Mixer - Professional",
+          "description": "Powerful stand mixer with multiple attachments for baking and cooking",
+          "price": 7999,
+          "discount": 9000,
+          "stock": 12,
+          "rating": 4.8,
+          "images": "https://agarolifestyle.com/cdn/shop/files/1_c8674da6-f432-4da6-84c5-59272d11f326.jpg?v=1739357121",
+          "specifications": {
+            "brand": "",
+            "power": "600 watts",
+            "capacity": "5.5 quart bowl",
+            "speeds": "10 speeds",
+            "attachments": "Flat beater, dough hook, wire whip",
+            "color": ["Red", "Black", "Silver"]
+          },
+          "tags": ["mixer", "baking", "appliance", "kitchen"]
+        },
+        {
+          "id": "k003",
+          "name": "Chef's Knife Set",
+          "description": "Professional 6-piece knife set with wooden block",
+          "price": 2999,
+          "discount": 4500,
+          "stock": 28,
+          "rating": 4.5,
+          "images": "https://5.imimg.com/data5/SELLER/Default/2022/6/TB/SQ/EO/7621964/7-pcs-imported-kitchen-knife-set-stainless-steel-with-wooden-block-stand-chef-s-7-in1-knife-set.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "High-carbon stainless steel",
+            "pieces": "6 knives + block",
+            "includes": "Chef's knife, bread knife, santoku, utility, paring, shears",
+            "handle": "Ergonomic polymer handle"
+          },
+          "tags": ["knives", "cutlery", "chef", "kitchen"]
+        },
+        {
+          "id": "k004",
+          "name": "Digital Food Scale",
+          "description": "Precise digital scale for weighing cooking ingredients",
+          "price": 5999,
+          "discount": 8000,
+          "stock": 45,
+          "rating": 4.3,
+          "images": "https://duronic.com/cdn/shop/files/81Wm-3hhIeL_1000x1000.jpg?v=1710952250",
+          "specifications": {
+            "brand": "",
+            "capacity": "11 lbs / 5 kg",
+            "precision": "0.1 oz / 1 g",
+            "units": "g, oz, lb, ml",
+            "display": "LCD display",
+            "battery": "2 AAA batteries"
+          },
+          "tags": ["scale", "measuring", "baking", "kitchen"]
+        },
+        {
+          "id": "k005",
+          "name": "Blender - High Performance",
+          "description": "Powerful blender for smoothies, soups, and food processing",
+          "price": 5000,
+          "discount": 8000,
+          "stock": 16,
+          "rating": 4.7,
+          "images": "https://www.nuwavenow.com/cdn/shop/files/moxie-vac-product-1-web.webp?v=1714063255",
+          "specifications": {
+            "brand": "",
+            "power": "1200 watts",
+            "capacity": "64 oz",
+            "speeds": "Variable speed control",
+            "features": "Pulse feature, smoothie program, easy clean",
+            "blades": "Stainless steel"
+          },
+          "tags": ["blender", "smoothie", "appliance", "kitchen"]
+        },
+        {
+          "id": "k006",
+          "name": "Non-Stick Bakeware Set",
+          "description": "Complete 10-piece baking set for cookies, cakes, and more",
+          "price": 4999,
+          "discount": 7000,
+          "stock": 35,
+          "rating": 4.4,
+          "images": "https://m.media-amazon.com/images/I/81OQlNaQrfL.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "Carbon steel with non-stick coating",
+            "pieces": "6 pieces",
+            "includes": "Baking sheet, loaf pan, muffin pan, round cake pans, square pan",
+            "dishwasherSafe": true
+          },
+          "tags": ["bakeware", "baking", "pans", "kitchen"]
+        }
+      ]
+    },
+    {
+      "id": "home_decor",
+      "name": "Home Decor",
+      "description": "Beautiful decorative items to enhance your living space",
+      "image": "decor-category.jpg",
+      "products": [
+        {
+          "id": "d001",
+          "name": "Decorative Throw Pillows - Set of 4",
+          "description": "Stylish accent pillows with various patterns and textures",
+          "price": 3000,
+          "discount": 5500,
+          "stock": 30,
+          "rating": 4.5,
+          "images": "https://m.media-amazon.com/images/I/71YAboIsyAL.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "Cotton and polyester blend",
+            "size": "18\" x 18\"",
+            "closure": "Hidden zipper",
+            "filling": "Hypoallergenic polyester",
+            "patterns": "Various complementary designs"
+          },
+          "tags": ["pillows", "decor", "living room", "accents"]
+        },
+        {
+          "id": "d002",
+          "name": "Wall Art Canvas Set - 3 Pieces",
+          "description": "Modern abstract wall art to enhance your space",
+          "price": 6999,
+          "discount": 9000,
+          "stock": 15,
+          "rating": 4.6,
+          "images": "https://cdn.magicdecor.in/com/2023/11/27170623/Starry-Night-Canvas-Artwork-Set-of-3-710x488.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "Canvas with wooden frame",
+            "size": "16\" x 24\" each piece",
+            "style": "Abstract",
+            "finish": "Gallery wrapped, ready to hang",
+            "color": "Blue and gold tones"
+          },
+          "tags": ["art", "wall decor", "canvas", "home decor"]
+        },
+        {
+          "id": "d003",
+          "name": "Decorative Table Lamp",
+          "description": "Elegant ceramic lamp with fabric shade",
+          "price": 8000,
+          "discount": 12500,
+          "stock": 22,
+          "rating": 4.3,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbLDZSraK30I8r0evi_IYoVjWunh5sGOwq1g&s",
+          "specifications": {
+            "brand": "",
+            "material": "Ceramic base with fabric shade",
+            "height": "26 inches",
+            "bulbType": "E26 socket, 60W max",
+            "switch": "On/off switch on cord",
+            "color": ["Blue", "White", "Beige"]
+          },
+          "tags": ["lamp", "lighting", "decor", "accent"]
+        },
+        {
+          "id": "d004",
+          "name": "Area Rug - 5'x7'",
+          "description": "Soft and durable area rug with modern pattern",
+          "price": 4999,
+          "discount": 5900,
+          "stock": 18,
+          "rating": 4.4,
+          "images": "https://cdn.knorrweb.com/jaipur-living/frr07_4.webp",
+          "specifications": {
+            "brand": "",
+            "material": "Polypropylene",
+            "size": "5' x 7'",
+            "pile": "Low pile, 0.4 inches",
+            "style": "Modern geometric",
+            "color": ["Grey/Blue", "Beige/Brown", "Multi-color"]
+          },
+          "tags": ["rug", "floor covering", "living room", "decor"]
+        },
+        {
+          "id": "d005",
+          "name": "Floating Wall Shelves - Set of 3",
+          "description": "Modern wall shelves for displaying decor and books",
+          "price": 7999,
+          "discount": 12000,
+          "stock": 40,
+          "rating": 4.2,
+          "images": "https://cdn.decornation.in/wp-content/uploads/2017/05/black-white-decorative-intersecting-wall-shelves.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "Engineered wood",
+            "sizes": "Large, medium, and small",
+            "weight capacity": "15 lbs per shelf",
+            "mounting": "Hidden bracket system",
+            "color": ["White", "Black", "Walnut"]
+          },
+          "tags": ["shelves", "wall decor", "storage", "display"]
+        },
+        {
+          "id": "d006",
+          "name": "Decorative Mirror - Round",
+          "description": "Elegant wall mirror with metal frame",
+          "price": 3999,
+          "discount": 5800,
+          "stock": 25,
+          "rating": 4.7,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFIoR9aU5lieaPKcekhDuVO0pMHBAh_rbeG-dybCiCPFGzRd520Gte8LTs6_1qKGkkXxU&usqp=CAU",
+          "specifications": {
+            "brand": "",
+            "shape": "Round",
+            "diameter": "30 inches",
+            "frame": "Metal",
+            "mounting": "Wall-mounted with included hardware",
+            "finish": ["Gold", "Black", "Silver"]
+          },
+          "tags": ["mirror", "wall decor", "accent", "home decor"]
+        }
+      ]
+    },
+    {
+      "id": "bedding",
+      "name": "Bedding & Linens",
+      "description": "Comfortable and stylish bedding essentials",
+      "image": "bedding-category.jpg",
+      "products": [
+        {
+          "id": "b001",
+          "name": "Luxury Comforter Set - Queen",
+          "description": "Complete bedding set with comforter, shams, and decorative pillows",
+          "price": 18000,
+          "discount": 25000,
+          "stock": 14,
+          "rating": 4.6,
+          "images": "https://www.kroger.com/product/images/large/front/0084044411010",
+          "specifications": {
+            "brand": "",
+            "size": "Queen",
+            "material": "100% cotton with polyester filling",
+            "pieces": "7 pieces",
+            "includes": "Comforter, 2 shams, bed skirt, 3 decorative pillows",
+            "care": "Machine washable"
+          },
+          "tags": ["bedding", "comforter", "bed set", "bedroom"]
+        },
+        {
+          "id": "b002",
+          "name": "Egyptian Cotton Sheet Set",
+          "description": "Premium 400 thread count cotton sheets",
+          "price": 4500,
+          "discount": 6300,
+          "stock": 24,
+          "rating": 4.7,
+          "images": "https://assets.digitalcontent.marksandspencer.app/image/upload/w_600,h_780,q_auto,f_auto,e_sharpen/HF_05_T35_1780S_FS_X_EC_0",
+          "specifications": {
+            "brand": "",
+            "material": "100% Egyptian cotton",
+            "threadCount": "400 TC",
+            "sizes": ["Twin", "Full", "Queen", "King"],
+            "includes": "Flat sheet, fitted sheet, 2 pillowcases",
+            "color": ["White", "Ivory", "Gray", "Blue"]
+          },
+          "tags": ["sheets", "bedding", "cotton", "bedroom"]
+        },
+        {
+          "id": "b003",
+          "name": "Memory Foam Pillows - 2 Pack",
+          "description": "Ergonomic memory foam pillows for better sleep",
+          "price": 3500,
+          "discount": 6000,
+          "stock": 35,
+          "rating": 4.5,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5jTZSgSndEP1wtpNbIZ9KhlA9LuYeAr1fZQ&s",
+          "specifications": {
+            "brand": "",
+            "material": "Memory foam with cooling gel",
+            "size": "Standard/Queen",
+            "cover": "Removable, washable hypoallergenic cover",
+            "features": "Contoured design, cooling technology"
+          },
+          "tags": ["pillows", "memory foam", "bedding", "sleep"]
+        },
+        {
+          "id": "b004",
+          "name": "Down Alternative Duvet Insert",
+          "description": "Hypoallergenic duvet with the feel of down",
+          "price": 2999,
+          "discount": 3500,
+          "stock": 19,
+          "rating": 4.4,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGuHZalNKehQvvTeqXRO_vUMiNqmOIlbUjFg&s",
+          "specifications": {
+            "brand": "",
+            "material": "Microfiber with hypoallergenic fill",
+            "sizes": ["Twin", "Full/Queen", "King"],
+            "weight": "All-season",
+            "construction": "Box stitched to prevent shifting",
+            "care": "Machine washable"
+          },
+          "tags": ["duvet", "comforter", "bedding", "hypoallergenic"]
+        },
+        {
+          "id": "b005",
+          "name": "Weighted Blanket",
+          "description": "Therapeutic weighted blanket for better sleep",
+          "price": 4000,
+          "discount": 7000,
+          "stock": 17,
+          "rating": 4.6,
+          "images": "https://sensooli.com/wp-content/uploads/2022/10/blanket1.jpeg",
+          "specifications": {
+            "brand": "",
+            "weight": ["10 lbs", "15 lbs", "20 lbs"],
+            "size": "60\" x 80\"",
+            "material": "100% cotton exterior, glass bead filling",
+            "cover": "Removable, washable cover",
+            "color": ["Gray", "Navy", "Taupe"]
+          },
+          "tags": ["blanket", "weighted", "therapy", "sleep"]
+        },
+        {
+          "id": "b006",
+          "name": "Decorative Throw Blanket",
+          "description": "Soft and stylish throw blanket for couch or bed",
+          "price": 3999,
+          "discount": 5000,
+          "stock": 42,
+          "rating": 4.3,
+          "images": "https://m.media-amazon.com/images/I/81AGBL8VRdL.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "Acrylic and polyester blend",
+            "size": "50\" x 60\"",
+            "style": "Knitted with fringe",
+            "care": "Machine washable",
+            "color": ["Mustard", "Teal", "Gray", "Burgundy"]
+          },
+          "tags": ["throw", "blanket", "decor", "cozy"]
+        }
+      ]
+    },
+    {
+      "id": "bath",
+      "name": "Bath & Towels",
+      "description": "Quality towels and bath accessories",
+      "image": "bath-category.jpg",
+      "products": [
+        {
+          "id": "ba001",
+          "name": "Luxury Bath Towel Set - 6 Piece",
+          "description": "Plush cotton towel set with bath towels, hand towels, and washcloths",
+          "price": 3950,
+          "discount": 6000,
+          "stock": 23,
+          "rating": 4.7,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnWXHEx6_geSOfuP_08Kps9yVIdNem3wTwQg&s",
+          "specifications": {
+            "brand": "",
+            "material": "100% Turkish cotton",
+            "weight": "600 GSM",
+            "includes": "2 bath towels, 2 hand towels, 2 washcloths",
+            "color": ["White", "Gray", "Navy", "Beige"]
+          },
+          "tags": ["towels", "bath", "cotton", "bathroom"]
+        },
+        {
+          "id": "ba002",
+          "name": "Memory Foam Bath Mat",
+          "description": "Super absorbent and soft bath mat with non-slip backing",
+          "price": 2450,
+          "discount": 3000,
+          "stock": 38,
+          "rating": 4.5,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxmpWZK6PtW7v_xlM-0o45bKRGE2I6zqn5_A&s",
+          "specifications": {
+            "brand": "",
+            "material": "Memory foam with microfiber cover",
+            "size": "20\" x 32\"",
+            "backing": "Non-slip PVC dots",
+            "features": "Quick-drying, machine washable",
+            "color": ["Gray", "White", "Blue", "Beige"]
+          },
+          "tags": ["bath mat", "bathroom", "non-slip", "memory foam"]
+        },
+        {
+          "id": "ba003",
+          "name": "Shower Curtain Set",
+          "description": "Waterproof shower curtain with decorative pattern and hooks",
+          "price": 2500,
+          "discount": 2800,
+          "stock": 45,
+          "rating": 4.3,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSum49XSqt49GcgMlIXnnj7pEzStkdXyz5bmg&s",
+          "specifications": {
+            "brand": "",
+            "material": "Polyester fabric",
+            "size": "72\" x 72\"",
+            "features": "Waterproof, machine washable",
+            "includes": "Curtain and 12 hooks",
+            "design": ["Geometric", "Floral", "Solid", "Striped"]
+          },
+          "tags": ["shower curtain", "bathroom", "waterproof", "decor"]
+        },
+        {
+          "id": "ba004",
+          "name": "Bathroom Storage Cabinet",
+          "description": "Freestanding cabinet with shelves for bathroom organization",
+          "price": 6500,
+          "discount": 8500,
+          "stock": 16,
+          "rating": 4.4,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKsrx1qTe2QqPhCbKmlt-ndF_z-h9VPyH72Q&s",
+          "specifications": {
+            "brand": "",
+            "material": "Engineered wood",
+            "dimensions": "24\" H x 20\" W x 10\" D",
+            "features": "Waterproof finish, adjustable shelf",
+            "assembly": "Easy assembly required",
+            "color": ["White", "Gray", "Brown"]
+          },
+          "tags": ["cabinet", "bathroom", "storage", "organization"]
+        },
+        {
+          "id": "ba005",
+          "name": "Bathroom Accessory Set",
+          "description": "Complete set of matching bathroom accessories",
+          "price": 1500,
+          "discount": 2000,
+          "stock": 28,
+          "rating": 4.2,
+          "images": "https://img2.tradewheel.com/uploads/images/products/8/8/modern-bath-complete-decoration-colored-vanity-accessory-plastic-luxury-accessories-bathroom-accessories-set-for-hotel1-0995692001618838182.jpg.webp",
+          "specifications": {
+            "brand": "",
+            "material": "Ceramic",
+            "pieces": "5 pieces",
+            "includes": "Soap dispenser, toothbrush holder, soap dish, tumbler, trash can",
+            "style": "Modern",
+            "color": ["White", "Black", "Beige"]
+          },
+          "tags": ["bathroom accessories", "decor", "organization", "ceramic"]
+        },
+        {
+          "id": "ba006",
+          "name": "Bamboo Bath Caddy",
+          "description": "Expandable bath tray for spa-like experience",
+          "price": 3400,
+          "discount": 5600,
+          "stock": 22,
+          "rating": 4.6,
+          "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNFk35eO9Og-HFZomoYmkDdJ0UbxUuMsiNEg&s",
+          "specifications": {
+            "brand": "",
+            "material": "Natural bamboo",
+            "width": "Adjustable 29.5\" to 43\"",
+            "features": "Book holder, wine glass slot, phone holder",
+            "waterproof": "Water-resistant finish",
+            "care": "Wipe clean with damp cloth"
+          },
+          "tags": ["bath caddy", "tray", "bamboo", "spa"]
+        }
+      ]
+    },
+    {
+      "id": "lighting",
+      "name": "Lighting",
+      "description": "Illuminate your home with stylish lighting solutions",
+      "image": "lighting-category.jpg",
+      "products": [
+        {
+          "id": "l001",
+          "name": "Floor Lamp with Reading Light",
+          "description": "Modern floor lamp with adjustable reading light",
+          "price": 8600,
+          "discount": 12090,
+          "stock": 18,
+          "rating": 4.5,
+          "images": "https://m.media-amazon.com/images/I/41g5FH7uCcL._SL500_.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "Metal with fabric shade",
+            "height": "68 inches",
+            "bulbs": "2 E26 sockets, 60W max each",
+            "features": "Adjustable reading arm, foot switch",
+            "color": ["Black", "Brass", "Nickel"]
+          },
+          "tags": ["lamp", "floor lamp", "lighting", "reading"]
+        },
+        {
+          "id": "l002",
+          "name": "Pendant Light Fixture",
+          "description": "Modern hanging pendant light for dining or kitchen",
+          "price": 7999,
+          "discount": 10000,
+          "stock": 14,
+          "rating": 4.6,
+          "images": "https://m.media-amazon.com/images/I/716ZSw-2fKL._AC_UF350,350_QL80_.jpg",
+          "specifications": {
+            "brand": "",
+            "material": "Metal and glass",
+            "diameter": "12 inches",
+            "bulb": "E26 socket, 60W max",
+            "adjustable": "Height adjustable cord",
+            "finish": ["Matte Black", "Brushed Nickel", "Bronze"]
+          },
+          "tags": ["pendant", "ceiling light", "fixture", "dining"]
+        },
+        {
+          "id": "l003",
+          "name": "LED Table Lamp with USB Port",
+          "description": "Stylish bedside table lamp with built-in USB charging port",
+          "price": 1100,
+          "discount": 1350,
+          "stock": 20,
+          "rating": 4.7,
+          "images": ["https://imgs.search.brave.com/PVqvlKr1CFRBjpDYs6jt5zyiv5fu6WN7ZQ9HlDH-qHI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFwbzBJeUVtT0wu/anBn"],
+          "specifications": {
+            "brand": "",
+            "material": "Wood and fabric shade",
+            "height": "15 inches",
+            "bulb": "E26 socket, 40W max",
+            "features": "USB charging port, touch control",
+            "color": ["White", "Black", "Gray"]
+          },
+          "tags": ["lamp", "table lamp", "USB", "bedside"]
+        },
+        {
+          "id": "l004",
+          "name": "Industrial Wall Sconce",
+          "description": "Vintage-style wall sconce light for bedroom or hallway",
+          "price": 800,
+          "discount": 1100,
+          "stock": 12,
+          "rating": 4.4,
+          "images": ["https://imgs.search.brave.com/PgfQtoGkHuRC-jUemYeyooCbVXzXWNa58xIE-QhA_ck/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bXVsbGFubGlnaHRp/bmcuY29tL21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS9l/MjZjZjkxNzcwNTUz/MDBjNTQ5ZjAyYWJj/N2RkNTY0Zi9tL2wv/bWx3bDM2NmFudGJy/cy11bC5qcGc"],
+          "specifications": {
+            "brand": "",
+            "material": "Metal",
+            "dimensions": "10 x 7 inches",
+            "bulb": "E26 socket, 60W max",
+            "adjustable": "Rotatable arm",
+            "finish": ["Matte Black", "Antique Brass"]
+          },
+          "tags": ["wall light", "sconce", "industrial", "vintage"]
+        }        
+      ]
+    }
+  ]
+}

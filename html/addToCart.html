@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../CSS/addToCart.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Comfortaa:wght@300..700&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="products-Cart">
+        <div id="prodImage-Div">
+            
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    const cartProducts = JSON.parse(localStorage.getItem("cart"))
+    console.log(cartProducts)
+
+
+    const productsPage = document.getElementById("products-Cart")
+
+    if(cartProducts == null || cartProducts.length <= 0){
+        const emptyCartDiv = document.createElement("div")
+        emptyCartDiv.id = "emptyCartDiv"
+
+        const emptyCart = document.createElement("h1")
+        emptyCart.innerText = "Oops! Looks like your cart is feeling lonely. Add some items to cheer it up!"
+        emptyCart.id = "emptyCart-Text"
+        
+        const addProdsButton = document.createElement("button")
+        addProdsButton.innerText = "Add Products?"
+        addProdsButton.id = "addProdsButton"
+        
+        addProdsButton.onclick = () => {
+            window.location.href = "cart-page.html"
+        }
+        emptyCartDiv.append(emptyCart, addProdsButton)
+        
+        productsPage.append(emptyCartDiv)
+    } 
+    
+    cartProducts.forEach(elem => {
+        console.log(elem.stock, "elem")
+        const container = document.createElement("div")
+        container.className = "cart-container"
+
+        const prodImageDiv = document.createElement("div");
+        prodImageDiv.id = "prodImage-Div"
+        const prodDetailsDiv  = document.createElement("div");
+        prodDetailsDiv.id = "prodDetails-Div"
+
+
+        const prodImg = document.createElement("img")
+        prodImg.setAttribute('src', elem.images)
+        prodImg.className = "prodImage"
+
+        let count = elem.quantity || 1
+
+        const qty_div = document.createElement("div")
+        qty_div.id = "qty-div"
+
+        const decButton = document.createElement("button")
+        decButton.innerText = "-"
+        decButton.className = "qty-minus"
+        
+        const qty = document.createElement("span")
+        qty.innerText = count
+        qty.className = "qty-count"
+
+        const incButton = document.createElement("button")
+        incButton.innerText = "+"
+        incButton.className = "qty-plus"
+
+        incButton.addEventListener("click", () => {
+        if (count < elem.stock) {
+            count++;
+            qty.innerText = count;
+            elem.quantity = count;
+            localStorage.setItem("cart", JSON.stringify(cartProducts));
+        } else {
+            alert("Stock availability is only " + elem.stock);
+        }
+    });
+
+    decButton.onclick = () => {
+        if (count > 1) {
+            count--;
+            qty.innerText = count;
+            elem.quantity = count;
+            localStorage.setItem("cart", JSON.stringify(cartProducts));
+        } else {
+            alert("Quantity cannot be 0!");
+        }
+    };
+        qty_div.append(incButton, qty, decButton)
+        
+        const prodDetails = document.createElement("div")
+        const prodName = document.createElement("h3")
+        prodName.innerText = elem.specifications.brand + '  ' + elem.name
+
+        const prodDesc = document.createElement("p")
+        prodDesc.innerText = elem.description
+        
+        const incPrice = document.createElement("del")
+        incPrice.innerText = "₹" + elem.discount
+        
+        const decPrice = document.createElement("h2")
+        decPrice.innerText ="₹" + elem.price
+        decPrice.className = "prodPrice"
+
+        const rating = document.createElement("p")
+        rating.className = "prodRating"
+        rating.innerText = "⭐" + elem.rating + "/5"
+        
+        const removeButton = document.createElement("button")
+        removeButton.id = "removeItemBtn"
+        removeButton.innerText = "Remove"
+       
+        removeButton.addEventListener("click", () => {
+            const updatedCart = cartProducts.filter(product => product.id !== elem.id);
+            localStorage.setItem("cart", JSON.stringify(updatedCart));
+            container.remove();
+            alert("Item removed")
+            location.reload()
+
+        });
+
+
+        container.addEventListener("mouseout", () => {
+            prodName.style.color = "black"
+            prodName.style.transform = 'scale(1)'
+            prodName.style.zIndex = '0'
+        })
+    
+        container.addEventListener("mouseover", () => {
+            prodName.style.color = "#ff5722"
+            prodName.style.transform = 'scale(1.01)'
+            prodName.style.zIndex = '10'
+        })
+        
+        prodImageDiv.append(prodImg, qty_div)
+        prodDetailsDiv.append(prodName, prodDesc, decPrice, incPrice, rating, removeButton)
+        container.append(prodImageDiv, prodDetailsDiv)
+        productsPage.append(container)
+        
+        
+    });
+    if(cartProducts.length > 0){
+        const placeOrderBtn = document.createElement("button");
+        placeOrderBtn.innerText = "Place Order";
+        placeOrderBtn.className = "place-order-btn";
+    
+        placeOrderBtn.addEventListener("click", () => {
+            cartProducts.forEach(elem => {
+                elem.qty = elem.quantity
+            }) 
+            localStorage.setItem("cart", JSON.stringify(cartProducts));
+            window.location.href = "checkout.html";
+        });
+    
+        productsPage.appendChild(placeOrderBtn);
+    }
+
+</script>

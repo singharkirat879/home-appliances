@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="stylesheet" href="../CSS/cart-page.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Comfortaa:wght@300..700&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <section class="navbar-section">
+        <header class="navbar-header">
+            <nav class="navbar-Nav">
+                
+                <div class="navbar-container">
+                    <!-- Logo -->
+                    <div id="logo-div">
+                        <a href="#">
+                            <img id="logo-Img" src="../images/logo-no-background.png" alt="Logo">
+                        </a>
+                    </div>
+    
+                    <!-- Search Bar -->
+                    <div id="search-Div">
+                        <form action="" id="formNavbar">
+                            <input type="search" placeholder="Search your product..." id="inputSearchProd">
+                            <button class="btn">Search</button>
+                        </form>
+                        
+                    </div>
+    
+                    <!-- User Actions -->
+                    <div id="user-credits">
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </section>
+    
+
+<div class="ProductPage-Div">
+    <div id="sidebar">
+        <p id="filter-topic"> Filters </p>
+        <div id="filterPrice-Div">
+            <p id="filterPrice">Price</p>
+            
+            <div id="inputPriceFilter">       
+                <input type="radio" name="choice" value="lowToHigh" id=""> Sort Low to High <br>
+                <input type="radio" name="choice" value="highToLow" id=""> Sort High to Low <br> 
+            </div>
+        </div>
+    </div>
+    
+    <div id="ProductPage">
+        <div class="categoryBtn-Div">
+            <button onclick="categoryFilter()" data-id="all" class="categoryBtn">All</button>
+            <button onclick="categoryFilter()"  data-id="electronics"  class="categoryBtn">Electronic Appliances</button>
+            <button  onclick="categoryFilter()" data-id="furniture"  class="categoryBtn">Furniture Appliances</button>
+            <button onclick="categoryFilter()"  data-id="kitchen"  class="categoryBtn">Kitchen Appliances</button>
+            <button onclick="categoryFilter()"  data-id="home_decor"  class="categoryBtn">Home Decor</button>
+            <button onclick="categoryFilter()"  data-id="bedding"  class="categoryBtn">Bedding & Linens</button>
+            <button  onclick="categoryFilter()" data-id="bath"  class="categoryBtn">Bath & Towels</button>
+            <button onclick="categoryFilter()"  data-id="lighting"  class="categoryBtn">Lighting</button>
+        <!-- <h1> <u> Our Products: </u> </h1> -->
+        </div>
+
+        <div id="Products">
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+    
+</body>
+</html>
+<script type="module" src="../JS/cart-page.js"> </script>
