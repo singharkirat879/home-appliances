@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeEase - Make Your Home Smarter</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content glassmorphism-heavy">
+                <h1>Elevate Your Living Space.</h1>
+                <p>Discover premium, state-of-the-art smart appliances built to seamlessly integrate into your beautiful home.</p>
+                <button class="cta-btn glowing" onclick="window.location.href='/products.html'">Shop Now</button>
+            </div>
+        </section>
+
+        <!-- Value Propositions -->
+        <section class="values-section">
+            <div class="value-card">
+                <i data-lucide="truck" class="val-icon"></i>
+                <h3>Free Fast Delivery</h3>
+                <p>On all orders above ₹5000</p>
+            </div>
+            <div class="value-card">
+                <i data-lucide="shield-check" class="val-icon"></i>
+                <h3>Premium Quality</h3>
+                <p>100% Guaranteed Reliability</p>
+            </div>
+            <div class="value-card">
+                <i data-lucide="headphones" class="val-icon"></i>
+                <h3>24/7 Support</h3>
+                <p>We're here when you need us</p>
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="reviews-section">
+            <h2>What Our Customers Say</h2>
+            <div class="reviews-grid">
+                
+                <div class="review-box glass-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The standalone mixer I bought completely changed my kitchen workflow. Beautifully designed and incredibly powerful!"</p>
+                    <div class="reviewer">
+                        <img src="https://i.pravatar.cc/100?img=47" alt="User" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Sarah Jenkins</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-box glass-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"HomeEase has the best delivery experience. My smart fridge arrived exactly on time without a single scratch."</p>
+                    <div class="reviewer">
+                        <img src="https://i.pravatar.cc/100?img=11" alt="User" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Rahul Verma</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-box glass-card">
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <p class="review-text">"Great collection of aesthetic lighting. It matched my minimalist living room perfectly. Slight delay in shipping, but worth it."</p>
+                    <div class="reviewer">
+                        <img src="https://i.pravatar.cc/100?img=32" alt="User" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Anita Rossi</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 HomeEase Appliances. All rights reserved.</p>
+    </footer>
+
+    <script type="module">
+        import { injectNavbar } from "../JS/navbar.js";
+        import { createIcons, icons } from "https://cdn.jsdelivr.net/npm/lucide@latest/+esm";
+
+        // Inject navbar dynamically
+        injectNavbar(false);
+        
+        // Let the DOM breath, then attach Lucide icons to everything else in the body (the value-cards)
+        setTimeout(() => {
+            createIcons({icons});
+        }, 100);
+    </script>
+</body>
+</html>

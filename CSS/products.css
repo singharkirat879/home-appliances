@@ -101,7 +101,7 @@ li a{
 #filter-topic{
     font-size: 26px;
     font-weight: 600;
-    margin-top: 40%;
+    margin-top: 20px;
 }
 #filterPrice{
     margin: 0 !important;
@@ -120,13 +120,13 @@ li a{
 .ProductPage-Div{
     /* border: 1px solid; */
     max-width: 100vw;
-    margin-top: 10px;
+    margin-top: 0px;
     display: flex;
 
 }
 #ProductPage{
     width: 90vw;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 #Products{

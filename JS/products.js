@@ -1,63 +1,59 @@
-import { createIcons, icons} from "https://cdn.jsdelivr.net/npm/lucide@latest/+esm";
+    import { injectNavbar } from "./navbar.js";
 
-    // Set up icons in your navbar
-    document.getElementById("user-credits").innerHTML = `
-        <i id="cart-Icon" data-lucide="shopping-cart"></i>
-         <span id="cart-count" 
-          style="position: absolute; top: 8px; right:107px; background: black; color: white; font-size: 12px; padding: 1px 5px; border-radius: 50%; display: none;">
-        0</span>
-        <i data-lucide="log-out"></i>
-    `;
-
-    createIcons({icons}); 
+    // Authentication Barrier - Runs immediately
+    async function requireAuth() {
+        try {
+            const response = await fetch('/api/auth/me');
+            if (!response.ok) {
+                // Boot out unauthenticated users
+                window.location.href = '/auth.html'; 
+            }
+        } catch (err) {
+            window.location.href = '/auth.html';
+        }
+    }
+    requireAuth();
+    
+    // Inject global navbar and show Search Bar
+    injectNavbar(true);
 
 let allProds = [];
-let cartLogo = document.getElementById("cart-Icon")
-cartLogo.onclick = () => {
-    window.location.href = "addToCart.html"
-}
-
 async function fetchProducts() {
-    try{
-    const products = await fetch('../products.json')
-    const res = await products.json()
-    allProds = res.categories
-    console.log(allProds)
-    displayProducts(res.categories)
-    addtoCartListener()
-}
+  try {
+    const response = await fetch('http://localhost:5000/api/products');
+    const data = await response.json();
 
-catch(error){
-    console.log(error, 'Error');
-}
-}
+    allProds = data;
+    console.log("Prods aagaye: " + allProds);
 
+    displayProducts(allProds);
+    addtoCartListener();
+
+  } catch (error) {
+    console.log("Error fetching products:", error);
+  }
+}
 
 const productPage = document.getElementById("Products")
-
-
-function displayProducts(categories){
+function displayProducts(data){
     productPage.innerHTML = "";
 
-    
-    for(let i = 0 ; i<categories.length; i++){
-        
-    categories[i].products.forEach(function(elem){ 
-            
-    const container = document.createElement("div")
-    container.classList.add("prodContainer")
-    container.setAttribute("data-category", categories[i].id.toLowerCase());
-    container.setAttribute("data-id", elem.id)
-    console.log(elem.id)
-            
-    
-    const prodImage  = document.createElement("img")
-    prodImage.setAttribute("src", elem.images)
-    prodImage.className = "prodImage"
+    console.log(data);
 
-    const prodName = document.createElement("p")
-    prodName.className = "prodName"
-    prodName.innerText = elem.specifications.brand + '  ' + elem.name
+    data.forEach(function(elem) {
+
+        const container = document.createElement("div")
+        container.classList.add("prodContainer")
+        container.setAttribute("data-category", elem.category?.toLowerCase());
+        container.setAttribute("data-id", elem.id)
+
+        const prodImage  = document.createElement("img")
+        prodImage.setAttribute("src", elem.image)   // ⚠️ also fix this
+        prodImage.className = "prodImage"
+
+        const prodName = document.createElement("p")
+        prodName.className = "prodName"
+        prodName.innerText = (elem.specifications?.brand || "") + ' ' + elem.name
     
     const prodDesc = document.createElement("p")
     prodDesc.className = "prodDesc"
@@ -94,13 +90,6 @@ function displayProducts(categories){
     cartBtn.className = "card-buy-btn"
     cartBtn.innerText = "Add to Cart"
 
-    const cart = JSON.parse(localStorage.getItem("cart")) || []
-    const isinCart = cart.find(p => p.id === elem.id)
-
-    if(isinCart){
-        cartBtn.innerText = "Remove from Cart"
-    }
-
     container.addEventListener("mouseout", () => {
         prodName.style.color = "black"
         prodName.style.transform = 'scale(1)'
@@ -123,15 +112,16 @@ function displayProducts(categories){
     productPage.append(container)
 
     container.onclick = () => {
-        localStorage.setItem("product", JSON.stringify(elem))
-        window.location.href="google.com"
+        // Optional placeholder for viewing product details
+        console.log("View Product Details:", elem);
     }
 })
 }
-updateCartBadge()
-}
-document.getElementById("formNavbar").addEventListener("keyup", searchProd)
-document.getElementById("formNavbar").addEventListener("submit", searchProd)
+// Wait for navbar injection before targeting the search bar
+setTimeout(() => {
+    document.getElementById("formNavbar").addEventListener("keyup", searchProd)
+    document.getElementById("formNavbar").addEventListener("submit", searchProd)
+}, 100);
 
 function searchProd(e) {
     e.preventDefault();
@@ -207,27 +197,34 @@ document.querySelectorAll("button").forEach((btn)=>{
 
 
 document.querySelectorAll('input[name="choice"]').forEach(function(radio){
-    radio.addEventListener('change', handlePriceSort)
+    radio.addEventListener('change', handleSort)
 })
 
-function handlePriceSort(event) {
-    const sortType = event.target.value;
-    const prodCat = [...allProds]; // clone
-    console.log(prodCat)
-  
-    for (let i = 0; i < prodCat.length; i++) {
-        if (sortType === "lowToHigh") {
-        prodCat[i].products.sort((a, b) => a.price - b.price);
-      } 
-      
-      else if (sortType === "highToLow") {
-        prodCat[i].products.sort((a, b) => b.price - a.price);
-    }
-    const prices = prodCat[i].products.map(prod => prod.price);
-    console.log(`Category: ${prodCat[i].name}`, prices);
-}
+document.getElementById('inStockCheck').addEventListener('change', handleSort)
 
-    displayProducts(prodCat);
+function handleSort(event) {
+    let sortedProds = [...allProds]; // clone
+  
+    // Find active radio
+    const activeRadio = document.querySelector('input[name="choice"]:checked');
+    const sortType = activeRadio ? activeRadio.value : null;
+
+    if (sortType === "lowToHigh") {
+        sortedProds.sort((a, b) => a.price - b.price);
+    } 
+    else if (sortType === "highToLow") {
+        sortedProds.sort((a, b) => b.price - a.price);
+    }
+    else if (sortType === "highestRating") {
+        sortedProds.sort((a, b) => b.rating - a.rating);
+    }
+
+    const inStockOnly = document.getElementById('inStockCheck').checked;
+    if (inStockOnly) {
+        sortedProds = sortedProds.filter(prod => prod.stock > 0);
+    }
+
+    displayProducts(sortedProds);
 }
 
 console.log(allProds)
@@ -239,48 +236,36 @@ function addtoCartListener() {
             e.stopPropagation()
             const prodCard = e.target.closest('.prodContainer')
             const prodId = prodCard.dataset.id
-            const catId = prodCard.dataset.category
             
-            const category = allProds.find(cat => cat.id === catId)
-            const product = category.products.find(prod => prod.id === prodId)
-            addToCart(product, e)
+            const product = allProds.find(prod => String(prod.id) === String(prodId))
+            if (product) addToCart(product, e)
         })
     })
   }
   
-  function addToCart(product, e) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
-    const alreadyInCart = cart.find(p => p.id === product.id);
-  
-    if (alreadyInCart) {
-      cart = cart.filter(p => p.id !== product.id);
-      e.target.innerText = "Add to Cart";
-      alert(`${product.name} removed from cart!`);
+  async function addToCart(product, e) {
+    e.target.innerText = "Adding...";
+    try {
+        const response = await fetch('/api/cart', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ productId: product.id })
+        });
+        if (response.ok) {
+            e.target.innerText = "Added!";
+            window.updateGlobalCartBadge(); // Call the global function
+            setTimeout(() => e.target.innerText = "Add to Cart", 2000);
+        } else {
+            alert("Failed to add to cart");
+            e.target.innerText = "Add to Cart";
+        }
+    } catch(err) {
+        console.error(err);
+        e.target.innerText = "Add to Cart";
     }
-     else {
-      cart.push(product);
-      alert(`${product.name} added to cart!`);
-      e.target.innerText = "Remove from Cart";
-    }
-  
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartBadge();
   }
   
 
-function updateCartBadge(){
-    const cart = JSON.parse(localStorage.getItem("cart")) || []
-    const badge = document.getElementById("cart-count")
 
-    if(cart.length > 0){
-        badge.style.display = "block"
-        badge.innerText = cart.length
-    }
-    else{
-        badge.style.display = "none"
-    }
-
-}
 
 fetchProducts();
