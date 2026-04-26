@@ -55,6 +55,44 @@ router.post("/checkout", requireAuth, (req, res) => {
   });
 });
 
+// Buy Now: Instant purchase of a single item
+router.post("/buy-now", requireAuth, (req, res) => {
+  const userId = req.session.userId;
+  const { productId } = req.body;
+
+  if (!productId) return res.status(400).json({ error: "Product ID required" });
+
+  // 1. Fetch product and check stock
+  db.query("SELECT * FROM products WHERE id = ?", [productId], (err, pRes) => {
+    if (err || pRes.length === 0) return res.status(404).json({ error: "Product not found" });
+    const product = pRes[0];
+
+    if (product.stock < 1) return res.status(400).json({ error: "Out of stock!" });
+
+    // 2. Create Order Record
+    const totalAmount = parseFloat(product.price);
+    const insertOrder = "INSERT INTO orders (user_id, total_amount, status) VALUES (?, ?, 'success')";
+    
+    db.query(insertOrder, [userId, totalAmount], (err, orderResult) => {
+      if (err) return res.status(500).json({ error: "Failed to create order" });
+      
+      const orderId = orderResult.insertId;
+
+      // 3. Create Order Item Snapshot
+      const insertItem = "INSERT INTO order_items (order_id, product_id, quantity, price_at_purchase) VALUES (?, ?, 1, ?)";
+      db.query(insertItem, [orderId, productId, product.price], (err) => {
+        if (err) return res.status(500).json({ error: "Failed to save order item" });
+
+        // 4. Deduct Stock
+        db.query("UPDATE products SET stock = stock - 1 WHERE id = ?", [productId], (err) => {
+          if (err) console.error("Warning: Stock deduction failed for Buy Now", productId);
+          return res.status(201).json({ message: "Order placed successfully!", orderId: orderId, totalAmount: totalAmount });
+        });
+      });
+    });
+  });
+});
+
 // GET Order History structured data
 router.get("/", requireAuth, (req, res) => {
   const userId = req.session.userId;

@@ -22,7 +22,12 @@
             "smartFeatures": "Voice control, streaming apps",
             "ports": "3 HDMI, 2 USB"
           },
-          "tags": ["tv", "smart tv", "4k", "home entertainment"]
+          "tags": [
+            "tv",
+            "smart tv",
+            "4k",
+            "home entertainment"
+          ]
         },
         {
           "id": "e002",
@@ -40,7 +45,12 @@
             "features": "Sleep mode, auto restart, remote control",
             "coverage": "Up to 180 sq.ft."
           },
-          "tags": ["air conditioner", "cooling", "home appliance", "summer"]
+          "tags": [
+            "air conditioner",
+            "cooling",
+            "home appliance",
+            "summer"
+          ]
         },
         {
           "id": "e003",
@@ -58,7 +68,12 @@
             "programs": "15 wash programs",
             "features": "Steam wash, quick wash, child lock"
           },
-          "tags": ["washing machine", "laundry", "home appliance", "cleaning"]
+          "tags": [
+            "washing machine",
+            "laundry",
+            "home appliance",
+            "cleaning"
+          ]
         },
         {
           "id": "e004",
@@ -76,14 +91,19 @@
             "power": "900W microwave, 1500W convection",
             "features": "Auto-cook menus, defrost, child lock"
           },
-          "tags": ["microwave", "cooking", "kitchen appliance", "convection"]
+          "tags": [
+            "microwave",
+            "cooking",
+            "kitchen appliance",
+            "convection"
+          ]
         },
         {
           "id": "e005",
           "name": "Refrigerator - Double Door",
           "description": "Energy efficient double door refrigerator with large capacity",
           "price": 32000,
-          "discount":35000 ,
+          "discount": 35000,
           "stock": 14,
           "rating": 4.7,
           "images": "https://www.bajajmall.in/emistore/media/catalog/product/custom/140x200/SAMSUNG236L2STARDOUBLEDOORREFRIGERATORELEGANTINOXRT28C3042S8HL.jpg",
@@ -94,7 +114,12 @@
             "energyRating": "4 Star",
             "features": "Frost-free, digital temperature control, multi airflow system"
           },
-          "tags": ["refrigerator", "fridge", "cooling", "kitchen appliance"]
+          "tags": [
+            "refrigerator",
+            "fridge",
+            "cooling",
+            "kitchen appliance"
+          ]
         },
         {
           "id": "e006",
@@ -112,7 +137,192 @@
             "stages": "7-stage filtration",
             "features": "Digital display, filter change indicator"
           },
-          "tags": ["water purifier", "filter", "ro", "home appliance"]
+          "tags": [
+            "water purifier",
+            "filter",
+            "ro",
+            "home appliance"
+          ]
+        },
+        {
+          "id": "e007",
+          "name": "Dishwasher - Compact",
+          "description": "Energy efficient dishwasher with ultra-quiet operation",
+          "price": 25000,
+          "discount": 28000,
+          "stock": 20,
+          "rating": "4.3",
+          "images": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "e008",
+          "name": "Air Purifier Pro",
+          "description": "HEPA filter air purifier with real-time air quality monitoring",
+          "price": 12000,
+          "discount": 15000,
+          "stock": 20,
+          "rating": "4.3",
+          "images": "https://images.unsplash.com/photo-1585724227191-7f5519f72782?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "e009",
+          "name": "Robot Vacuum Cleaner",
+          "description": "Automatic floor cleaner with mapping technology",
+          "price": 18000,
+          "discount": 22000,
+          "stock": 20,
+          "rating": "4.7",
+          "images": "https://images.unsplash.com/photo-1518314916301-73c13b10c662?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "e010",
+          "name": "Pop-up Toaster",
+          "description": "2-Slice stainless steel toaster with browning control",
+          "price": 1500,
+          "discount": 2000,
+          "stock": 20,
+          "rating": "4.1",
+          "images": "https://images.unsplash.com/photo-1526078332158-b643a6d713c2?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "e011",
+          "name": "Electric Kettle 1.8L",
+          "description": "Fast boiling electric kettle with auto-shutoff",
+          "price": 1200,
+          "discount": 1800,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1594212699903-ec8a3eea50f6?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "e012",
+          "name": "Espresso Coffee Machine",
+          "description": "Professional grade espresso maker for home baristas",
+          "price": 8500,
+          "discount": 10000,
+          "stock": 20,
+          "rating": "4.8",
+          "images": "https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "e013",
+          "name": "Induction Cooktop",
+          "description": "Portable induction stove with touch controls",
+          "price": 3500,
+          "discount": 4500,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "e014",
+          "name": "Food Processor",
+          "description": "Multi-functional food processor with dough kneading",
+          "price": 6500,
+          "discount": 7500,
+          "stock": 20,
+          "rating": "4.6",
+          "images": "https://images.unsplash.com/photo-1574635560942-0298a08d24b6?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "e015",
+          "name": "Smart Ceiling Fan",
+          "description": "Remote controlled fan with LED lighting and app support",
+          "price": 5500,
+          "discount": 6500,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "e016",
+          "name": "Ultrasonic Humidifier",
+          "description": "Cool mist humidifier for large rooms with humidistat",
+          "price": 3000,
+          "discount": 4000,
+          "stock": 20,
+          "rating": "4.9",
+          "images": "https://images.unsplash.com/photo-1542152332-680486fa50fc?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "electronics",
+            "new",
+            "deal"
+          ]
         }
       ]
     },
@@ -135,10 +345,19 @@
             "brand": "",
             "material": "Premium polyester fabric",
             "dimensions": "82\" W x 34\" D x 32\" H",
-            "color": ["Grey", "Blue", "Beige"],
+            "color": [
+              "Grey",
+              "Blue",
+              "Beige"
+            ],
             "assembly": "Minimal assembly required"
           },
-          "tags": ["sofa", "living room", "mid-century", "seating"]
+          "tags": [
+            "sofa",
+            "living room",
+            "mid-century",
+            "seating"
+          ]
         },
         {
           "id": "f002",
@@ -154,9 +373,18 @@
             "material": "Solid wood and engineered wood",
             "dimensions": "63\" W x 84\" L x 45\" H",
             "weight capacity": "800 lbs",
-            "color": ["Walnut", "Oak", "White"]
+            "color": [
+              "Walnut",
+              "Oak",
+              "White"
+            ]
           },
-          "tags": ["bed", "bedroom", "platform", "storage"]
+          "tags": [
+            "bed",
+            "bedroom",
+            "platform",
+            "storage"
+          ]
         },
         {
           "id": "f003",
@@ -172,9 +400,17 @@
             "material": "Mesh back and padded seat",
             "adjustability": "Height, tilt, armrests",
             "weight capacity": "300 lbs",
-            "color": ["Black", "Grey"]
+            "color": [
+              "Black",
+              "Grey"
+            ]
           },
-          "tags": ["chair", "office", "ergonomic", "desk"]
+          "tags": [
+            "chair",
+            "office",
+            "ergonomic",
+            "desk"
+          ]
         },
         {
           "id": "f004",
@@ -189,10 +425,19 @@
             "brand": "",
             "material": "Engineered wood with veneer finish",
             "dimensions": "40\" W x 24\" D x 18\" H",
-            "color": ["Espresso", "White", "Oak"],
+            "color": [
+              "Espresso",
+              "White",
+              "Oak"
+            ],
             "features": "Lift-top mechanism, storage drawer"
           },
-          "tags": ["table", "coffee table", "living room", "storage"]
+          "tags": [
+            "table",
+            "coffee table",
+            "living room",
+            "storage"
+          ]
         },
         {
           "id": "f005",
@@ -208,9 +453,18 @@
             "material": "Engineered wood",
             "dimensions": "30\" W x 12\" D x 72\" H",
             "weight capacity": "30 lbs per shelf",
-            "color": ["Black", "White", "Brown"]
+            "color": [
+              "Black",
+              "White",
+              "Brown"
+            ]
           },
-          "tags": ["bookcase", "shelf", "storage", "display"]
+          "tags": [
+            "bookcase",
+            "shelf",
+            "storage",
+            "display"
+          ]
         },
         {
           "id": "f006",
@@ -226,9 +480,198 @@
             "material": "Solid wood with fabric chairs",
             "dimensions": "72\" L x 42\" W x 30\" H",
             "seating": "6 people",
-            "color": ["Cherry", "Espresso", "Grey"]
+            "color": [
+              "Cherry",
+              "Espresso",
+              "Grey"
+            ]
           },
-          "tags": ["dining", "table", "chairs", "kitchen"]
+          "tags": [
+            "dining",
+            "table",
+            "chairs",
+            "kitchen"
+          ]
+        },
+        {
+          "id": "f007",
+          "name": "Recliner Armchair",
+          "description": "Comfortable leather recliner with manual lever",
+          "price": 15000,
+          "discount": 18000,
+          "stock": 20,
+          "rating": "4.0",
+          "images": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "f008",
+          "name": "Minimalist Bookcase",
+          "description": "Slim 4-shelf bookcase for small spaces",
+          "price": 4500,
+          "discount": 5500,
+          "stock": 20,
+          "rating": "4.5",
+          "images": "https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "f009",
+          "name": "Wooden TV Unit",
+          "description": "Modern TV stand with storage drawers and cable management",
+          "price": 8900,
+          "discount": 11000,
+          "stock": 20,
+          "rating": "4.7",
+          "images": "https://images.unsplash.com/photo-1593081891731-fda085ccdb40?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "f010",
+          "name": "Double Door Wardrobe",
+          "description": "Spacious wardrobe with hanging rod and internal shelves",
+          "price": 12500,
+          "discount": 15000,
+          "stock": 20,
+          "rating": "4.9",
+          "images": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "f011",
+          "name": "Multi-tier Shoe Rack",
+          "description": "Stackable metal shoe rack for entryways",
+          "price": 1800,
+          "discount": 2500,
+          "stock": 20,
+          "rating": "4.9",
+          "images": "https://images.unsplash.com/photo-1595943553587-484242449261?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "f012",
+          "name": "Classic Bean Bag",
+          "description": "Large comfortable bean bag chair with faux leather cover",
+          "price": 2500,
+          "discount": 3500,
+          "stock": 20,
+          "rating": "4.5",
+          "images": "https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "f013",
+          "name": "Modern Nightstand",
+          "description": "Bedside table with single drawer and open shelf",
+          "price": 3200,
+          "discount": 4000,
+          "stock": 20,
+          "rating": "4.5",
+          "images": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "f014",
+          "name": "Computer Study Desk",
+          "description": "Large surface desk for home office use",
+          "price": 5500,
+          "discount": 7000,
+          "stock": 20,
+          "rating": "4.3",
+          "images": "https://images.unsplash.com/photo-1518455027359-43f99793a7e0?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "f015",
+          "name": "Adjustable Bar Stool",
+          "description": "Swivel bar stool with chrome base and padding",
+          "price": 3800,
+          "discount": 5000,
+          "stock": 20,
+          "rating": "4.1",
+          "images": "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "f016",
+          "name": "Storage Ottoman",
+          "description": "Upholstered bench with hidden storage under seat",
+          "price": 4200,
+          "discount": 5500,
+          "stock": 20,
+          "rating": "4.8",
+          "images": "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "furniture",
+            "new",
+            "deal"
+          ]
         }
       ]
     },
@@ -254,7 +697,12 @@
             "dishwasherSafe": true,
             "inductionCompatible": true
           },
-          "tags": ["cookware", "pots", "pans", "kitchen"]
+          "tags": [
+            "cookware",
+            "pots",
+            "pans",
+            "kitchen"
+          ]
         },
         {
           "id": "k002",
@@ -271,9 +719,18 @@
             "capacity": "5.5 quart bowl",
             "speeds": "10 speeds",
             "attachments": "Flat beater, dough hook, wire whip",
-            "color": ["Red", "Black", "Silver"]
+            "color": [
+              "Red",
+              "Black",
+              "Silver"
+            ]
           },
-          "tags": ["mixer", "baking", "appliance", "kitchen"]
+          "tags": [
+            "mixer",
+            "baking",
+            "appliance",
+            "kitchen"
+          ]
         },
         {
           "id": "k003",
@@ -291,7 +748,12 @@
             "includes": "Chef's knife, bread knife, santoku, utility, paring, shears",
             "handle": "Ergonomic polymer handle"
           },
-          "tags": ["knives", "cutlery", "chef", "kitchen"]
+          "tags": [
+            "knives",
+            "cutlery",
+            "chef",
+            "kitchen"
+          ]
         },
         {
           "id": "k004",
@@ -310,7 +772,12 @@
             "display": "LCD display",
             "battery": "2 AAA batteries"
           },
-          "tags": ["scale", "measuring", "baking", "kitchen"]
+          "tags": [
+            "scale",
+            "measuring",
+            "baking",
+            "kitchen"
+          ]
         },
         {
           "id": "k005",
@@ -329,7 +796,12 @@
             "features": "Pulse feature, smoothie program, easy clean",
             "blades": "Stainless steel"
           },
-          "tags": ["blender", "smoothie", "appliance", "kitchen"]
+          "tags": [
+            "blender",
+            "smoothie",
+            "appliance",
+            "kitchen"
+          ]
         },
         {
           "id": "k006",
@@ -347,7 +819,192 @@
             "includes": "Baking sheet, loaf pan, muffin pan, round cake pans, square pan",
             "dishwasherSafe": true
           },
-          "tags": ["bakeware", "baking", "pans", "kitchen"]
+          "tags": [
+            "bakeware",
+            "baking",
+            "pans",
+            "kitchen"
+          ]
+        },
+        {
+          "id": "k007",
+          "name": "Premium Knife Block Set",
+          "description": "15-piece stainless steel knife set with sharpener",
+          "price": 4500,
+          "discount": 6000,
+          "stock": 20,
+          "rating": "4.7",
+          "images": "https://images.unsplash.com/photo-1593618998160-e34014e67546?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "k008",
+          "name": "Multi Grater & Slicer",
+          "description": "Handheld grater with interchangeable blades",
+          "price": 800,
+          "discount": 1200,
+          "stock": 20,
+          "rating": "4.0",
+          "images": "https://images.unsplash.com/photo-1594385208974-2e75f9d863f3?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "k009",
+          "name": "Airtight Storage Jar Set",
+          "description": "Set of 6 glass containers with bamboo lids",
+          "price": 2200,
+          "discount": 3000,
+          "stock": 20,
+          "rating": "4.8",
+          "images": "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "k010",
+          "name": "Large Bamboo Cutting Board",
+          "description": "Heavy-duty wooden board for vegetable prepping",
+          "price": 1200,
+          "discount": 1800,
+          "stock": 20,
+          "rating": "4.5",
+          "images": "https://images.unsplash.com/photo-1584281722572-870371900366?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "k011",
+          "name": "Marble Rolling Pin",
+          "description": "Elegant heavy marble pin with wooden handles",
+          "price": 1500,
+          "discount": 2000,
+          "stock": 20,
+          "rating": "4.1",
+          "images": "https://images.unsplash.com/photo-1589736862597-94943f550993?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "k012",
+          "name": "Rotating Spice Rack",
+          "description": "16-jar spice organizer with labels",
+          "price": 1800,
+          "discount": 2500,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "k013",
+          "name": "Dish Drying Rack",
+          "description": "Stainless steel over-the-sink drying rack",
+          "price": 2800,
+          "discount": 3500,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1591114518776-6644f8087796?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "k014",
+          "name": "Large Salad Spinner",
+          "description": "Quick-dry greens with easy-turn handle",
+          "price": 900,
+          "discount": 1200,
+          "stock": 20,
+          "rating": "5.0",
+          "images": "https://images.unsplash.com/photo-1516667500041-359f63566160?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "k015",
+          "name": "Silicone Spatula Set",
+          "description": "Heat-resistant kitchen tools for non-stick pans",
+          "price": 600,
+          "discount": 800,
+          "stock": 20,
+          "rating": "4.2",
+          "images": "https://images.unsplash.com/photo-1594385208670-692751336c92?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "k016",
+          "name": "Steel Measuring Cup Set",
+          "description": "Heavy-duty cups and spoons with engraved markers",
+          "price": 1000,
+          "discount": 1400,
+          "stock": 20,
+          "rating": "4.3",
+          "images": "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "kitchen",
+            "new",
+            "deal"
+          ]
         }
       ]
     },
@@ -374,7 +1031,12 @@
             "filling": "Hypoallergenic polyester",
             "patterns": "Various complementary designs"
           },
-          "tags": ["pillows", "decor", "living room", "accents"]
+          "tags": [
+            "pillows",
+            "decor",
+            "living room",
+            "accents"
+          ]
         },
         {
           "id": "d002",
@@ -393,7 +1055,12 @@
             "finish": "Gallery wrapped, ready to hang",
             "color": "Blue and gold tones"
           },
-          "tags": ["art", "wall decor", "canvas", "home decor"]
+          "tags": [
+            "art",
+            "wall decor",
+            "canvas",
+            "home decor"
+          ]
         },
         {
           "id": "d003",
@@ -410,9 +1077,18 @@
             "height": "26 inches",
             "bulbType": "E26 socket, 60W max",
             "switch": "On/off switch on cord",
-            "color": ["Blue", "White", "Beige"]
+            "color": [
+              "Blue",
+              "White",
+              "Beige"
+            ]
           },
-          "tags": ["lamp", "lighting", "decor", "accent"]
+          "tags": [
+            "lamp",
+            "lighting",
+            "decor",
+            "accent"
+          ]
         },
         {
           "id": "d004",
@@ -429,9 +1105,18 @@
             "size": "5' x 7'",
             "pile": "Low pile, 0.4 inches",
             "style": "Modern geometric",
-            "color": ["Grey/Blue", "Beige/Brown", "Multi-color"]
+            "color": [
+              "Grey/Blue",
+              "Beige/Brown",
+              "Multi-color"
+            ]
           },
-          "tags": ["rug", "floor covering", "living room", "decor"]
+          "tags": [
+            "rug",
+            "floor covering",
+            "living room",
+            "decor"
+          ]
         },
         {
           "id": "d005",
@@ -448,9 +1133,18 @@
             "sizes": "Large, medium, and small",
             "weight capacity": "15 lbs per shelf",
             "mounting": "Hidden bracket system",
-            "color": ["White", "Black", "Walnut"]
+            "color": [
+              "White",
+              "Black",
+              "Walnut"
+            ]
           },
-          "tags": ["shelves", "wall decor", "storage", "display"]
+          "tags": [
+            "shelves",
+            "wall decor",
+            "storage",
+            "display"
+          ]
         },
         {
           "id": "d006",
@@ -467,9 +1161,198 @@
             "diameter": "30 inches",
             "frame": "Metal",
             "mounting": "Wall-mounted with included hardware",
-            "finish": ["Gold", "Black", "Silver"]
+            "finish": [
+              "Gold",
+              "Black",
+              "Silver"
+            ]
           },
-          "tags": ["mirror", "wall decor", "accent", "home decor"]
+          "tags": [
+            "mirror",
+            "wall decor",
+            "accent",
+            "home decor"
+          ]
+        },
+        {
+          "id": "d007",
+          "name": "Modern Table Clock",
+          "description": "Silent non-ticking analog desk clock",
+          "price": 800,
+          "discount": 1200,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1510511459019-5dee99c4fd96?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "d008",
+          "name": "Artificial Succulent Pots",
+          "description": "Set of 6 realistic mini faux plants",
+          "price": 1200,
+          "discount": 1800,
+          "stock": 20,
+          "rating": "4.0",
+          "images": "https://images.unsplash.com/photo-1545239351-ef35f43d514b?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "d009",
+          "name": "Glass Flower Vase",
+          "description": "Hand-blown decorative vase for centerpieces",
+          "price": 2500,
+          "discount": 3500,
+          "stock": 20,
+          "rating": "4.9",
+          "images": "https://images.unsplash.com/photo-1581781870027-04212e231e96?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "d010",
+          "name": "Wall Map Poster",
+          "description": "Large scratch-off world travel map",
+          "price": 1500,
+          "discount": 2200,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "d011",
+          "name": "Scented Candle Set",
+          "description": "Premium soy wax candles in various fragrances",
+          "price": 1800,
+          "discount": 2500,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1603006905393-c35076a5966a?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "d012",
+          "name": "Reed Diffuser Kit",
+          "description": "Essential oil aromatic diffuser with sticks",
+          "price": 2200,
+          "discount": 3000,
+          "stock": 20,
+          "rating": "4.5",
+          "images": "https://images.unsplash.com/photo-1547049080-60b540248421?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "d013",
+          "name": "Dream Catcher Wall Hanging",
+          "description": "Handmade boho-style decorative hanging",
+          "price": 900,
+          "discount": 1400,
+          "stock": 20,
+          "rating": "4.3",
+          "images": "https://images.unsplash.com/photo-1515516089376-88db1e26e9c0?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "d014",
+          "name": "Decorative Bookends",
+          "description": "Heavy metal 'A-Z' book holders",
+          "price": 1400,
+          "discount": 2000,
+          "stock": 20,
+          "rating": "5.0",
+          "images": "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "d015",
+          "name": "Macrame Plant Hanger",
+          "description": "Cotton rope indoor hanging planter",
+          "price": 700,
+          "discount": 1000,
+          "stock": 20,
+          "rating": "4.6",
+          "images": "https://images.unsplash.com/photo-1485955900006-10f4d324d445?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "d016",
+          "name": "Sunburst Wall Clock",
+          "description": "Large metal designer wall clock",
+          "price": 3500,
+          "discount": 4500,
+          "stock": 20,
+          "rating": "4.9",
+          "images": "https://images.unsplash.com/photo-1534349762230-e0cadf78f5db?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "home_decor",
+            "new",
+            "deal"
+          ]
         }
       ]
     },
@@ -496,7 +1379,12 @@
             "includes": "Comforter, 2 shams, bed skirt, 3 decorative pillows",
             "care": "Machine washable"
           },
-          "tags": ["bedding", "comforter", "bed set", "bedroom"]
+          "tags": [
+            "bedding",
+            "comforter",
+            "bed set",
+            "bedroom"
+          ]
         },
         {
           "id": "b002",
@@ -511,11 +1399,26 @@
             "brand": "",
             "material": "100% Egyptian cotton",
             "threadCount": "400 TC",
-            "sizes": ["Twin", "Full", "Queen", "King"],
+            "sizes": [
+              "Twin",
+              "Full",
+              "Queen",
+              "King"
+            ],
             "includes": "Flat sheet, fitted sheet, 2 pillowcases",
-            "color": ["White", "Ivory", "Gray", "Blue"]
+            "color": [
+              "White",
+              "Ivory",
+              "Gray",
+              "Blue"
+            ]
           },
-          "tags": ["sheets", "bedding", "cotton", "bedroom"]
+          "tags": [
+            "sheets",
+            "bedding",
+            "cotton",
+            "bedroom"
+          ]
         },
         {
           "id": "b003",
@@ -533,7 +1436,12 @@
             "cover": "Removable, washable hypoallergenic cover",
             "features": "Contoured design, cooling technology"
           },
-          "tags": ["pillows", "memory foam", "bedding", "sleep"]
+          "tags": [
+            "pillows",
+            "memory foam",
+            "bedding",
+            "sleep"
+          ]
         },
         {
           "id": "b004",
@@ -547,12 +1455,21 @@
           "specifications": {
             "brand": "",
             "material": "Microfiber with hypoallergenic fill",
-            "sizes": ["Twin", "Full/Queen", "King"],
+            "sizes": [
+              "Twin",
+              "Full/Queen",
+              "King"
+            ],
             "weight": "All-season",
             "construction": "Box stitched to prevent shifting",
             "care": "Machine washable"
           },
-          "tags": ["duvet", "comforter", "bedding", "hypoallergenic"]
+          "tags": [
+            "duvet",
+            "comforter",
+            "bedding",
+            "hypoallergenic"
+          ]
         },
         {
           "id": "b005",
@@ -565,13 +1482,26 @@
           "images": "https://sensooli.com/wp-content/uploads/2022/10/blanket1.jpeg",
           "specifications": {
             "brand": "",
-            "weight": ["10 lbs", "15 lbs", "20 lbs"],
+            "weight": [
+              "10 lbs",
+              "15 lbs",
+              "20 lbs"
+            ],
             "size": "60\" x 80\"",
             "material": "100% cotton exterior, glass bead filling",
             "cover": "Removable, washable cover",
-            "color": ["Gray", "Navy", "Taupe"]
+            "color": [
+              "Gray",
+              "Navy",
+              "Taupe"
+            ]
           },
-          "tags": ["blanket", "weighted", "therapy", "sleep"]
+          "tags": [
+            "blanket",
+            "weighted",
+            "therapy",
+            "sleep"
+          ]
         },
         {
           "id": "b006",
@@ -588,9 +1518,199 @@
             "size": "50\" x 60\"",
             "style": "Knitted with fringe",
             "care": "Machine washable",
-            "color": ["Mustard", "Teal", "Gray", "Burgundy"]
+            "color": [
+              "Mustard",
+              "Teal",
+              "Gray",
+              "Burgundy"
+            ]
           },
-          "tags": ["throw", "blanket", "decor", "cozy"]
+          "tags": [
+            "throw",
+            "blanket",
+            "decor",
+            "cozy"
+          ]
+        },
+        {
+          "id": "b007",
+          "name": "Soft Fleece Throw",
+          "description": "Cozy velvet touch blanket for winters",
+          "price": 1200,
+          "discount": 1800,
+          "stock": 20,
+          "rating": "4.1",
+          "images": "https://images.unsplash.com/photo-1580302200322-224430dd3577?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "b008",
+          "name": "Body Pillow with Cover",
+          "description": "Long pregnancy and side-sleeper pillow",
+          "price": 2800,
+          "discount": 3500,
+          "stock": 20,
+          "rating": "4.1",
+          "images": "https://images.unsplash.com/photo-1581702811425-63f53835694a?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "b009",
+          "name": "Anti-allergy Quilt",
+          "description": "Lightweight breathable quilt for all seasons",
+          "price": 3500,
+          "discount": 4500,
+          "stock": 20,
+          "rating": "4.7",
+          "images": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "b010",
+          "name": "Silk Pillowcase Pair",
+          "description": "100% pure mulberry silk for hair and skin care",
+          "price": 2200,
+          "discount": 3000,
+          "stock": 20,
+          "rating": "4.6",
+          "images": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "b011",
+          "name": "Bed Sheet Set - Floral",
+          "description": "Soft microfiber bedding with vibrant prints",
+          "price": 1500,
+          "discount": 2200,
+          "stock": 20,
+          "rating": "4.6",
+          "images": "https://images.unsplash.com/photo-1551290464-67252277f98d?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "b012",
+          "name": "Cooling Mattress Topper",
+          "description": "Gel-infused memory foam for heat control",
+          "price": 5500,
+          "discount": 7500,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "b013",
+          "name": "Blackout Window Curtains",
+          "description": "Thermal insulated room darkening drapes",
+          "price": 2500,
+          "discount": 3500,
+          "stock": 20,
+          "rating": "4.2",
+          "images": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "b014",
+          "name": "Knitted Pouf Ottoman",
+          "description": "Hand-knitted footrest for bedrooms",
+          "price": 1800,
+          "discount": 2500,
+          "stock": 20,
+          "rating": "4.4",
+          "images": "https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "b015",
+          "name": "Under Bed Storage Bags",
+          "description": "Set of 3 garment organizers with windows",
+          "price": 1200,
+          "discount": 1800,
+          "stock": 20,
+          "rating": "4.6",
+          "images": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "b016",
+          "name": "Cotton Bed Runner",
+          "description": "Decorative patterned long strip for bed foot",
+          "price": 900,
+          "discount": 1400,
+          "stock": 20,
+          "rating": "4.8",
+          "images": "https://images.unsplash.com/photo-1629949009765-40fc74c9eca5?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bedding",
+            "new",
+            "deal"
+          ]
         }
       ]
     },
@@ -614,9 +1734,19 @@
             "material": "100% Turkish cotton",
             "weight": "600 GSM",
             "includes": "2 bath towels, 2 hand towels, 2 washcloths",
-            "color": ["White", "Gray", "Navy", "Beige"]
+            "color": [
+              "White",
+              "Gray",
+              "Navy",
+              "Beige"
+            ]
           },
-          "tags": ["towels", "bath", "cotton", "bathroom"]
+          "tags": [
+            "towels",
+            "bath",
+            "cotton",
+            "bathroom"
+          ]
         },
         {
           "id": "ba002",
@@ -633,9 +1763,19 @@
             "size": "20\" x 32\"",
             "backing": "Non-slip PVC dots",
             "features": "Quick-drying, machine washable",
-            "color": ["Gray", "White", "Blue", "Beige"]
+            "color": [
+              "Gray",
+              "White",
+              "Blue",
+              "Beige"
+            ]
           },
-          "tags": ["bath mat", "bathroom", "non-slip", "memory foam"]
+          "tags": [
+            "bath mat",
+            "bathroom",
+            "non-slip",
+            "memory foam"
+          ]
         },
         {
           "id": "ba003",
@@ -652,9 +1792,19 @@
             "size": "72\" x 72\"",
             "features": "Waterproof, machine washable",
             "includes": "Curtain and 12 hooks",
-            "design": ["Geometric", "Floral", "Solid", "Striped"]
+            "design": [
+              "Geometric",
+              "Floral",
+              "Solid",
+              "Striped"
+            ]
           },
-          "tags": ["shower curtain", "bathroom", "waterproof", "decor"]
+          "tags": [
+            "shower curtain",
+            "bathroom",
+            "waterproof",
+            "decor"
+          ]
         },
         {
           "id": "ba004",
@@ -671,9 +1821,18 @@
             "dimensions": "24\" H x 20\" W x 10\" D",
             "features": "Waterproof finish, adjustable shelf",
             "assembly": "Easy assembly required",
-            "color": ["White", "Gray", "Brown"]
+            "color": [
+              "White",
+              "Gray",
+              "Brown"
+            ]
           },
-          "tags": ["cabinet", "bathroom", "storage", "organization"]
+          "tags": [
+            "cabinet",
+            "bathroom",
+            "storage",
+            "organization"
+          ]
         },
         {
           "id": "ba005",
@@ -690,9 +1849,18 @@
             "pieces": "5 pieces",
             "includes": "Soap dispenser, toothbrush holder, soap dish, tumbler, trash can",
             "style": "Modern",
-            "color": ["White", "Black", "Beige"]
+            "color": [
+              "White",
+              "Black",
+              "Beige"
+            ]
           },
-          "tags": ["bathroom accessories", "decor", "organization", "ceramic"]
+          "tags": [
+            "bathroom accessories",
+            "decor",
+            "organization",
+            "ceramic"
+          ]
         },
         {
           "id": "ba006",
@@ -711,7 +1879,192 @@
             "waterproof": "Water-resistant finish",
             "care": "Wipe clean with damp cloth"
           },
-          "tags": ["bath caddy", "tray", "bamboo", "spa"]
+          "tags": [
+            "bath caddy",
+            "tray",
+            "bamboo",
+            "spa"
+          ]
+        },
+        {
+          "id": "ba007",
+          "name": "Bamboo Bath Mat Set",
+          "description": "Eco-friendly wooden slats for shower output",
+          "price": 1800,
+          "discount": 2500,
+          "stock": 20,
+          "rating": "4.0",
+          "images": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "ba008",
+          "name": "Shower Head with Filter",
+          "description": "High-pressure nozzle with water softener",
+          "price": 1200,
+          "discount": 1800,
+          "stock": 20,
+          "rating": "4.1",
+          "images": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "ba009",
+          "name": "Cotton Robe - Unisex",
+          "description": "Waffle-knit lightweight bathrobe for hotel feel",
+          "price": 2500,
+          "discount": 3500,
+          "stock": 20,
+          "rating": "4.8",
+          "images": "https://images.unsplash.com/photo-1560536480-e8379471fcae?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "ba010",
+          "name": "Over the Door Towel Rack",
+          "description": "Multi-hook bathroom organizer without drilling",
+          "price": 900,
+          "discount": 1400,
+          "stock": 20,
+          "rating": "4.2",
+          "images": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "ba011",
+          "name": "Toiletry Organizer Bin",
+          "description": "Stackable clear acrylic bathroom storage",
+          "price": 700,
+          "discount": 1000,
+          "stock": 20,
+          "rating": "4.9",
+          "images": "https://images.unsplash.com/photo-1616627027399-41df5ec97f43?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "ba012",
+          "name": "LED Vanity Mirror",
+          "description": "Lighted makeup mirror with 5x magnification",
+          "price": 3500,
+          "discount": 4500,
+          "stock": 20,
+          "rating": "4.8",
+          "images": "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "ba013",
+          "name": "Automatic Soap Dispenser",
+          "description": "Touchless infrared motion sensor pump",
+          "price": 1500,
+          "discount": 2200,
+          "stock": 20,
+          "rating": "4.9",
+          "images": "https://images.unsplash.com/photo-1621230104144-d2ca0010ca6f?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "ba014",
+          "name": "Hair Dryer Holder",
+          "description": "Wall-mounted stand for blow dryers and tools",
+          "price": 500,
+          "discount": 800,
+          "stock": 20,
+          "rating": "4.2",
+          "images": "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "ba015",
+          "name": "Loofah Sponge Set",
+          "description": "Pack of 4 natural exfoliating mesh loofahs",
+          "price": 400,
+          "discount": 600,
+          "stock": 20,
+          "rating": "4.8",
+          "images": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "ba016",
+          "name": "Corner Shower Caddy",
+          "description": "Rustproof tension pole shelving for showers",
+          "price": 2800,
+          "discount": 3500,
+          "stock": 20,
+          "rating": "4.5",
+          "images": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "bath",
+            "new",
+            "deal"
+          ]
         }
       ]
     },
@@ -736,9 +2089,18 @@
             "height": "68 inches",
             "bulbs": "2 E26 sockets, 60W max each",
             "features": "Adjustable reading arm, foot switch",
-            "color": ["Black", "Brass", "Nickel"]
+            "color": [
+              "Black",
+              "Brass",
+              "Nickel"
+            ]
           },
-          "tags": ["lamp", "floor lamp", "lighting", "reading"]
+          "tags": [
+            "lamp",
+            "floor lamp",
+            "lighting",
+            "reading"
+          ]
         },
         {
           "id": "l002",
@@ -755,9 +2117,18 @@
             "diameter": "12 inches",
             "bulb": "E26 socket, 60W max",
             "adjustable": "Height adjustable cord",
-            "finish": ["Matte Black", "Brushed Nickel", "Bronze"]
+            "finish": [
+              "Matte Black",
+              "Brushed Nickel",
+              "Bronze"
+            ]
           },
-          "tags": ["pendant", "ceiling light", "fixture", "dining"]
+          "tags": [
+            "pendant",
+            "ceiling light",
+            "fixture",
+            "dining"
+          ]
         },
         {
           "id": "l003",
@@ -767,16 +2138,27 @@
           "discount": 1350,
           "stock": 20,
           "rating": 4.7,
-          "images": ["https://imgs.search.brave.com/PVqvlKr1CFRBjpDYs6jt5zyiv5fu6WN7ZQ9HlDH-qHI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFwbzBJeUVtT0wu/anBn"],
+          "images": [
+            "https://imgs.search.brave.com/PVqvlKr1CFRBjpDYs6jt5zyiv5fu6WN7ZQ9HlDH-qHI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFwbzBJeUVtT0wu/anBn"
+          ],
           "specifications": {
             "brand": "",
             "material": "Wood and fabric shade",
             "height": "15 inches",
             "bulb": "E26 socket, 40W max",
             "features": "USB charging port, touch control",
-            "color": ["White", "Black", "Gray"]
+            "color": [
+              "White",
+              "Black",
+              "Gray"
+            ]
           },
-          "tags": ["lamp", "table lamp", "USB", "bedside"]
+          "tags": [
+            "lamp",
+            "table lamp",
+            "USB",
+            "bedside"
+          ]
         },
         {
           "id": "l004",
@@ -786,17 +2168,207 @@
           "discount": 1100,
           "stock": 12,
           "rating": 4.4,
-          "images": ["https://imgs.search.brave.com/PgfQtoGkHuRC-jUemYeyooCbVXzXWNa58xIE-QhA_ck/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bXVsbGFubGlnaHRp/bmcuY29tL21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS9l/MjZjZjkxNzcwNTUz/MDBjNTQ5ZjAyYWJj/N2RkNTY0Zi9tL2wv/bWx3bDM2NmFudGJy/cy11bC5qcGc"],
+          "images": [
+            "https://imgs.search.brave.com/PgfQtoGkHuRC-jUemYeyooCbVXzXWNa58xIE-QhA_ck/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bXVsbGFubGlnaHRp/bmcuY29tL21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS9l/MjZjZjkxNzcwNTUz/MDBjNTQ5ZjAyYWJj/N2RkNTY0Zi9tL2wv/bWx3bDM2NmFudGJy/cy11bC5qcGc"
+          ],
           "specifications": {
             "brand": "",
             "material": "Metal",
             "dimensions": "10 x 7 inches",
             "bulb": "E26 socket, 60W max",
             "adjustable": "Rotatable arm",
-            "finish": ["Matte Black", "Antique Brass"]
+            "finish": [
+              "Matte Black",
+              "Antique Brass"
+            ]
           },
-          "tags": ["wall light", "sconce", "industrial", "vintage"]
-        }        
+          "tags": [
+            "wall light",
+            "sconce",
+            "industrial",
+            "vintage"
+          ]
+        },
+        {
+          "id": "l005",
+          "name": "Smart LED Bulb RGB",
+          "description": "App-compatible color changing light bulb",
+          "price": 600,
+          "discount": 900,
+          "stock": 20,
+          "rating": "4.0",
+          "images": "https://images.unsplash.com/photo-1513506493441-2679f2dc2a33?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "l006",
+          "name": "Solar Garden Spikes",
+          "description": "Set of 10 solar-powered outdoor path lights",
+          "price": 2500,
+          "discount": 3500,
+          "stock": 20,
+          "rating": "4.7",
+          "images": "https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "l007",
+          "name": "Motion Sensor Night Light",
+          "description": "Plug-in auto-sensing hallway lamp",
+          "price": 500,
+          "discount": 800,
+          "stock": 20,
+          "rating": "4.1",
+          "images": "https://images.unsplash.com/photo-1510511459019-5dee99c4fd96?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "l008",
+          "name": "String Fairy Lights",
+          "description": "10-meter warm white copper wire lights",
+          "price": 400,
+          "discount": 700,
+          "stock": 20,
+          "rating": "4.3",
+          "images": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "l009",
+          "name": "Vintage Edison Bulbs",
+          "description": "Pack of 4 decorative spiral filament bulbs",
+          "price": 1400,
+          "discount": 2000,
+          "stock": 20,
+          "rating": "4.3",
+          "images": "https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "l010",
+          "name": "Portable Work Light",
+          "description": "Rechargeable high-intensity LED emergency lamp",
+          "price": 1800,
+          "discount": 2500,
+          "stock": 20,
+          "rating": "4.9",
+          "images": "https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "l011",
+          "name": "Clip-on Reading Light",
+          "description": "Flexible eye-care lamp for books and desks",
+          "price": 700,
+          "discount": 1100,
+          "stock": 20,
+          "rating": "4.8",
+          "images": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "l012",
+          "name": "Smart Strip Lights 5M",
+          "description": "Musical sync RGBIC strip for ambient gaming",
+          "price": 2200,
+          "discount": 3000,
+          "stock": 20,
+          "rating": "4.6",
+          "images": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "l013",
+          "name": "Industrial Desk Lamp",
+          "description": "Steampunk style metal pipe lamp with wood base",
+          "price": 3800,
+          "discount": 5000,
+          "stock": 20,
+          "rating": "4.1",
+          "images": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        },
+        {
+          "id": "l014",
+          "name": "Moon Lamp - 3D Printed",
+          "description": "Color changing moonlight sphere with stand",
+          "price": 1200,
+          "discount": 1800,
+          "stock": 20,
+          "rating": "4.7",
+          "images": "https://images.unsplash.com/photo-1532634922-8fe0b757fb13?auto=format&fit=crop&w=800&q=80",
+          "specifications": {
+            "brand": "Generic"
+          },
+          "tags": [
+            "lighting",
+            "new",
+            "deal"
+          ]
+        }
       ]
     }
   ]

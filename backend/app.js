@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-app.use(cors());
+
 
 
 require("dotenv").config();
@@ -32,9 +32,32 @@ app.get("/api/products", (req, res) => {
   });
 });
 
+app.get("/api/products/:id", (req, res) => {
+  const productId = req.params.id;
+  const query = "SELECT * FROM products WHERE id = ?";
+
+  db.query(query, [productId], (err, result) => {
+    if (err) {
+      return res.status(500).json({ error: "Database error" });
+    }
+    if (result.length === 0) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+    res.json(result[0]);
+  });
+});
+
 // middleware
+const allowedOrigins = ["http://localhost:5000", "http://127.0.0.1:5000", "http://localhost:3000"];
 app.use(cors({
-  origin: "http://localhost:3000", // Required if frontend is making requests on a different port and needs credentials
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      return callback(new Error('The CORS policy for this site does not allow access from the specified Origin.'), false);
+    }
+    return callback(null, true);
+  },
   credentials: true
 }));
 app.use(express.json());
