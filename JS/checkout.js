@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const buyNowId = urlParams.get("buyNow");
     
-    console.log("Checkout initial load - BuyNowId:", buyNowId);
 
     // Disable button until price loads
     confirmBtn.disabled = true;
@@ -30,12 +29,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             let isBuyNow = false;
 
             if (buyNowId) {
-                console.log("Entering Buy Now Mode for ID:", buyNowId);
                 // Fetch single product for Buy Now
                 const res = await fetch(`/api/products/${buyNowId}`);
                 if (res.ok) {
                     const product = await res.json();
-                    console.log("Fetched single product details:", product);
                     products = [{ ...product, quantity: 1 }];
                     isBuyNow = true;
                 } else {
@@ -44,7 +41,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                     return;
                 }
             } else {
-                console.log("Entering normal Cart Mode");
                 // Normal Cart Checkout
                 const res = await fetch("/api/cart");
                 if (!res.ok) {
@@ -53,7 +49,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                     return;
                 }
                 products = await res.json();
-                console.log("Fetched cart products:", products.length);
             }
 
             if (!products || products.length === 0) {
@@ -69,11 +64,21 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const itemTotal = parseFloat(item.price) * (item.quantity || 1);
                 total += itemTotal;
 
+                let displayImg = item.image || item.images;
+                try {
+                    if (typeof displayImg === "string" && displayImg.startsWith("[")) {
+                        const parsed = JSON.parse(displayImg);
+                        displayImg = Array.isArray(parsed) && parsed.length > 0 ? parsed[0] : displayImg;
+                    } else if (Array.isArray(displayImg) && displayImg.length > 0) {
+                        displayImg = displayImg[0];
+                    }
+                } catch (e) { }
+
                 const row = document.createElement("div");
                 row.className = "item-row";
                 row.innerHTML = `
                     <div class="item-details">
-                        <img src="${item.image || item.images}" class="item-img" alt="Product Image">
+                        <img src="${displayImg || '../images/placeholder.jpg'}" class="item-img" alt="Product Image" onerror="this.src='../images/placeholder.jpg'">
                         <div>
                             <p class="item-name">${item.name}</p>
                             <p class="item-qty">Qty: ${item.quantity || 1}</p>
@@ -97,15 +102,39 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const isBuyNowMode = await loadCheckoutItems();
 
+    // Restrict phone input to numbers only and max 10 digits
+    const phoneInput = document.getElementById("phone-number");
+    if (phoneInput) {
+        phoneInput.addEventListener("input", (e) => {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+            if (e.target.value.length > 10) {
+                e.target.value = e.target.value.slice(0, 10);
+            }
+        });
+    }
+
     // Handle Confirm Order
     confirmBtn.addEventListener("click", async () => {
+        const address = document.getElementById("shipping-address").value.trim();
+        const phone = document.getElementById("phone-number").value.trim();
+
+        if (!address || !phone) {
+            window.showAlert("Missing Info", "Please fill in both your shipping address and phone number.");
+            return;
+        }
+
+        // Enforce exactly 10 digits
+        if (phone.length !== 10) {
+            window.showAlert("Invalid Phone", "Please enter a valid 10-digit phone number.");
+            return;
+        }
+
         confirmBtn.innerText = "Processing...";
         confirmBtn.disabled = true;
 
         const endpoint = isBuyNowMode ? "/api/orders/buy-now" : "/api/orders/checkout";
-        const postData = isBuyNowMode ? { productId: buyNowId } : {};
+        const postData = isBuyNowMode ? { productId: buyNowId, address, phone } : { address, phone };
 
-        console.log("Confirming order. Endpoint:", endpoint, "Mode:", isBuyNowMode ? "BuyNow" : "Cart");
 
         try {
             const checkoutRes = await fetch(endpoint, {
@@ -115,7 +144,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
             
             if (checkoutRes.ok) {
-                console.log("Order success!");
                 document.getElementById("success-overlay").classList.remove("hidden");
                 setTimeout(() => {
                     window.location.href = "/products.html"
@@ -123,13 +151,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             } else {
                 const data = await checkoutRes.json();
                 console.error("Order failed:", data);
-                alert(data.error || "Failed to process order!");
+                window.showAlert("Order Failed", data.error || "Failed to process order!");
                 confirmBtn.innerText = "Confirm Purchase";
                 confirmBtn.disabled = false;
             }
         } catch (err) {
             console.error("Network error during order confirmation:", err);
-            alert("Network error.");
+            window.showAlert("Error", "Network error.");
             confirmBtn.innerText = "Confirm Purchase";
             confirmBtn.disabled = false;
         }

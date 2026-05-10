@@ -92,7 +92,8 @@ input::placeholder {
 
 input:focus {
     background: #fff;
-    border-color: #ff5722; /* Accents based on existing site colors */
+    border-color: #ff5722;
+    /* Accents based on existing site colors */
     box-shadow: 0 0 12px rgba(255, 87, 34, 0.3);
 }
 
@@ -139,4 +140,14 @@ input:focus {
     font-weight: 600;
     min-height: 20px;
     margin-top: -5px;
+}
+
+/* Responsive Auth */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 40px 25px;
+    }
+    h2 {
+        font-size: 24px;
+    }
 }

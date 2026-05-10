@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="../CSS/products.css">
+    <title>Products | HomeEase</title>
+    <link rel="stylesheet" href="../CSS/products.css?v=1.1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -22,52 +22,59 @@
     <!-- NAVBAR Injected Dynamically by JS -->
 
     <div class="ProductPage-Div">
+        <!-- Mobile Filter Toggle -->
+        <button id="mobileFilterToggle" class="mobile-filter-btn">
+            <i data-lucide="filter"></i> Filters & Categories
+        </button>
+
         <div id="sidebar">
             <p id="filter-topic"> Filters </p>
-            <div id="filterPrice-Div">
-                <p id="filterPrice">Price</p>
+            
+            <div class="category-filter-section">
+                <p class="filter-subtitle">Categories</p>
+                <div class="categoryBtn-Div">
+                    <button onclick="categoryFilter()" data-id="all" class="categoryBtn">All</button>
+                    <button onclick="categoryFilter()" data-id="electronics" class="categoryBtn">Electronics</button>
+                    <button onclick="categoryFilter()" data-id="furniture" class="categoryBtn">Furniture</button>
+                    <button onclick="categoryFilter()" data-id="kitchen" class="categoryBtn">Kitchen</button>
+                    <button onclick="categoryFilter()" data-id="home_decor" class="categoryBtn">Home Decor</button>
+                    <button onclick="categoryFilter()" data-id="bedding" class="categoryBtn">Bedding</button>
+                    <button onclick="categoryFilter()" data-id="bath" class="categoryBtn">Bath</button>
+                    <button onclick="categoryFilter()" data-id="lighting" class="categoryBtn">Lighting</button>
+                </div>
+            </div>
 
+            <div id="filterPrice-Div">
+                <p id="filterPrice">Sort Price</p>
                 <div id="inputPriceFilter">
-                    <input type="radio" name="choice" value="lowToHigh" id="lowToHighRad"> Sort Low to High <br>
-                    <input type="radio" name="choice" value="highToLow" id="highToLowRad"> Sort High to Low <br>
+                    <input type="radio" name="choice" value="lowToHigh" id="lowToHighRad"> Low to High <br>
+                    <input type="radio" name="choice" value="highToLow" id="highToLowRad"> High to Low <br>
                 </div>
             </div>
-            <div id="filterRating-Div" style="margin-top: 25px;">
-                <p id="filterRating" style="font-weight: 600; font-size: 18px;">Product Rating</p>
-                <div id="inputRatingFilter" style="margin-top: 10px;">
-                    <input type="radio" name="choice" value="highestRating"> Highest Rated First <br>
+
+            <div id="filterRating-Div">
+                <p id="filterRating">Product Rating</p>
+                <div id="inputRatingFilter">
+                    <input type="radio" name="choice" value="highestRating"> Highest Rated <br>
                 </div>
             </div>
-            <div id="filterStock-Div" style="margin-top: 25px; margin-bottom: 25px;">
-                <p style="font-weight: 600; font-size: 18px;">Inventory</p>
+
+            <div id="filterStock-Div">
+                <p id="filterStock">Inventory</p>
                 <input type="checkbox" id="inStockCheck"> In Stock Only <br>
             </div>
+
             <button id="clearFiltersBtn" class="remove-filters-btn">Clear All Filters</button>
         </div>
 
         <div id="ProductPage">
-            <div class="categoryBtn-Div">
-                <button onclick="categoryFilter()" data-id="all" class="categoryBtn">All</button>
-                <button onclick="categoryFilter()" data-id="electronics" class="categoryBtn">Electronic
-                    Appliances</button>
-                <button onclick="categoryFilter()" data-id="furniture" class="categoryBtn">Furniture Appliances</button>
-                <button onclick="categoryFilter()" data-id="kitchen" class="categoryBtn">Kitchen Appliances</button>
-                <button onclick="categoryFilter()" data-id="home_decor" class="categoryBtn">Home Decor</button>
-                <button onclick="categoryFilter()" data-id="bedding" class="categoryBtn">Bedding & Linens</button>
-                <button onclick="categoryFilter()" data-id="bath" class="categoryBtn">Bath & Towels</button>
-                <button onclick="categoryFilter()" data-id="lighting" class="categoryBtn">Lighting</button>
-            </div>
-
             <div id="Products">
-
+                <!-- Products dynamically loaded -->
             </div>
-
         </div>
-
     </div>
 
-
+    <script type="module" src="../JS/products.js"> </script>
 </body>
 
 </html>
-<script type="module" src="../JS/products.js"> </script>

@@ -53,9 +53,21 @@ function renderProduct(product) {
         }
     }
 
+    // Parse image
+    let displayImage = product.image || product.images;
+    try {
+        if (typeof displayImage === "string" && displayImage.startsWith("[")) {
+            const parsed = JSON.parse(displayImage);
+            displayImage = Array.isArray(parsed) && parsed.length > 0 ? parsed[0] : displayImage;
+        } else if (Array.isArray(displayImage) && displayImage.length > 0) {
+            displayImage = displayImage[0];
+        }
+    } catch (e) { }
+    if (!displayImage) displayImage = "../images/placeholder.jpg";
+
     container.innerHTML = `
         <div class="col-md-6 detail-img-container">
-            <img src="${product.image || product.images}" class="detail-img" alt="${product.name}">
+            <img src="${displayImage}" class="detail-img" alt="${product.name}" onerror="this.src='../images/placeholder.jpg'">
         </div>
         <div class="col-md-6 product-info-section">
             <p class="product-brand">${product.specifications?.brand || "Premium Appliance"}</p>
@@ -88,17 +100,23 @@ function renderProduct(product) {
             ` : ""}
 
             <div class="action-buttons">
-                <button id="detail-add-cart" class="btn-add-cart">Add to Cart</button>
-                <button id="detail-buy-now" class="btn-buy-now">Buy Now</button>
+                ${product.stock > 0 ? `
+                    <button id="detail-add-cart" class="btn-add-cart">Add to Cart</button>
+                    <button id="detail-buy-now" class="btn-buy-now">Buy Now</button>
+                ` : `
+                    <p style="color: red; font-weight: bold; font-size: 1.2rem; margin: 0;">Currently Out of Stock</p>
+                `}
             </div>
         </div>
     `;
 
     // 4. Attach Action Listeners
-    document.getElementById("detail-add-cart").addEventListener("click", () => handleAddToCart(product));
-    document.getElementById("detail-buy-now").addEventListener("click", () => {
-        window.location.href = `checkout.html?buyNow=${product.id}`;
-    });
+    if (product.stock > 0) {
+        document.getElementById("detail-add-cart").addEventListener("click", () => handleAddToCart(product));
+        document.getElementById("detail-buy-now").addEventListener("click", () => {
+            window.location.href = `checkout.html?buyNow=${product.id}`;
+        });
+    }
 }
 
 async function handleAddToCart(product) {
@@ -121,7 +139,7 @@ async function handleAddToCart(product) {
                 btn.disabled = false;
             }, 2000);
         } else {
-            alert("Failed to add to cart. Please log in.");
+            window.showAlert("Notice", "Failed to add to cart. Please log in.");
             btn.innerText = "Add to Cart";
             btn.disabled = false;
         }

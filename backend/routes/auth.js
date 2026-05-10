@@ -11,16 +11,18 @@ router.post("/register", async (req, res) => {
     return res.status(400).json({ error: "All fields are required" });
   }
 
-  // Backend Input Validation
+  // Name Validation
   if (name.trim().length === 0) {
     return res.status(400).json({ error: "Name cannot be empty" });
   }
 
+  // Email Validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({ error: "Please provide a valid email address" });
   }
 
+  // Password Validation
   if (password.length < 6) {
     return res.status(400).json({ error: "Password must be at least 6 characters long" });
   }
@@ -96,7 +98,7 @@ router.post("/login", (req, res) => {
         name: user.name,
         email: user.email
       };
-      
+
       return res.json({ message: "Logged in successfully", user: req.session.user });
     } catch (error) {
       console.error("Bcrypt compare error:", error);
@@ -112,7 +114,7 @@ router.post("/logout", (req, res) => {
       console.error("Session destroy error:", err);
       return res.status(500).json({ error: "Could not log out, please try again" });
     }
-    
+
     // Clear the session cookie from the client
     res.clearCookie('session_cookie_name');
     return res.json({ message: "Logged out successfully" });

@@ -28,16 +28,28 @@ async function fetchProducts() {
         displayProducts(allProds);
         addtoCartListener();
 
+        // Auto-filter based on URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryParam = urlParams.get('category');
+
+        if (categoryParam) {
+            const targetBtn = document.querySelector(`button.categoryBtn[data-id="${categoryParam}"]`);
+            if (targetBtn) {
+                targetBtn.click();
+            }
+        }
+
     } catch (error) {
         console.log("Error fetching products:", error);
     }
 }
 
 const productPage = document.getElementById("Products")
+
+
 function displayProducts(data) {
     productPage.innerHTML = "";
 
-    console.log(data);
 
     data.forEach(function (elem) {
 
@@ -47,7 +59,17 @@ function displayProducts(data) {
         container.setAttribute("data-id", elem.id)
 
         const prodImage = document.createElement("img")
-        prodImage.setAttribute("src", elem.image)   // ⚠️ also fix this
+        let imageUrl = elem.image;
+        try {
+            if (typeof imageUrl === "string" && imageUrl.startsWith("[")) {
+                const parsed = JSON.parse(imageUrl);
+                imageUrl = Array.isArray(parsed) && parsed.length > 0 ? parsed[0] : imageUrl;
+            } else if (Array.isArray(imageUrl) && imageUrl.length > 0) {
+                imageUrl = imageUrl[0];
+            }
+        } catch (e) { }
+        prodImage.setAttribute("src", imageUrl || "../images/placeholder.jpg")
+        prodImage.setAttribute("onerror", "this.src='../images/placeholder.jpg'")
         prodImage.className = "prodImage"
 
         const prodName = document.createElement("p")
@@ -110,7 +132,16 @@ function displayProducts(data) {
         prodTags.className = "prodTags"
 
 
-        buttonsDiv.append(cartBtn, buyNowBtn)
+        if (elem.stock > 0) {
+            buttonsDiv.append(cartBtn, buyNowBtn)
+        } else {
+            const outOfStockText = document.createElement("p");
+            outOfStockText.innerText = "Out of Stock";
+            outOfStockText.style.color = "red";
+            outOfStockText.style.fontWeight = "bold";
+            outOfStockText.style.margin = "0";
+            buttonsDiv.append(outOfStockText);
+        }
         container.append(prodImage, prodName, prodDesc, priceContainer, rating, buttonsDiv, prodTags) // Append grouped container
         productPage.append(container)
 
@@ -172,29 +203,48 @@ function searchProd(e) {
 }
 
 function categoryFilter(e) {
-    const selectedCategory = e.target.dataset.id
-    console.log(selectedCategory)
-    const prodContainers = document.querySelectorAll(".prodContainer")
-    // console.log(prodContainers)
+    // Handle both event listener and direct call
+    const target = e.target || e;
+    const selectedCategory = target.dataset.id || target.getAttribute('data-id');
+    
+    if (!selectedCategory) return;
+
+    const prodContainers = document.querySelectorAll(".prodContainer");
 
     prodContainers.forEach((product) => {
-        let productCategory = product.dataset.category
-        // console.log(productCategory)
+        let productCategory = product.dataset.category;
 
         if (selectedCategory === "all" || productCategory === selectedCategory) {
-            product.style.display = "block"
+            product.style.display = "flex"; // Changed from 'block' to 'flex' to maintain layout
         }
         else {
-            product.style.display = "none"
+            product.style.display = "none";
         }
+    });
 
-
-    })
+    // On mobile, close the sidebar after selecting a category
+    if (window.innerWidth <= 768) {
+        document.getElementById("sidebar").classList.remove("active");
+    }
 }
 
-document.querySelectorAll("button").forEach((btn) => {
-    btn.addEventListener("click", categoryFilter)
-})
+// Attach listeners to category buttons
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("categoryBtn")) {
+        categoryFilter(e);
+    }
+});
+
+// Mobile Sidebar Toggle
+const filterToggle = document.getElementById("mobileFilterToggle");
+const sidebar = document.getElementById("sidebar");
+
+if (filterToggle && sidebar) {
+    filterToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+}
+
 
 
 
@@ -230,7 +280,8 @@ function handleSort(event) {
     displayProducts(sortedProds);
 }
 
-console.log(allProds)
+
+
 function addtoCartListener() {
     const addtoCartBtns = document.querySelectorAll(".card-buy-btn")
 
@@ -269,7 +320,7 @@ async function addToCart(product, e) {
             window.updateGlobalCartBadge(); // Call the global function
             setTimeout(() => e.target.innerText = "Add to Cart", 2000);
         } else {
-            alert("Failed to add to cart");
+            window.showAlert("Error", "Failed to add to cart");
             e.target.innerText = "Add to Cart";
         }
     } catch (err) {
@@ -301,7 +352,7 @@ function clearAllFilters() {
     // 6. Re-display all products in original state
     displayProducts(allProds);
     addtoCartListener();
-    
+
     console.log("Filters cleared!");
 }
 

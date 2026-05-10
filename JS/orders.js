@@ -63,10 +63,18 @@ document.addEventListener("DOMContentLoaded", async () => {
             // 2. The Items List
             let itemsHtml = '<div class="order-items-list">';
             order.items.forEach(item => {
+                let itemImg = item.image;
+                try {
+                    if (typeof itemImg === "string" && itemImg.startsWith("[")) {
+                        const parsed = JSON.parse(itemImg);
+                        itemImg = Array.isArray(parsed) && parsed.length > 0 ? parsed[0] : itemImg;
+                    }
+                } catch (e) { }
+
                 itemsHtml += `
                     <div class="line-item">
                         <div class="line-info">
-                            <img src="${item.image}" class="line-img">
+                            <img src="${itemImg || '../images/placeholder.jpg'}" class="line-img" onerror="this.src='../images/placeholder.jpg'">
                             <div>
                                 <p class="line-name">${item.name}</p>
                                 <p class="line-qty">Qty: ${item.quantity}</p>

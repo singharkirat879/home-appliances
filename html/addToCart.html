@@ -80,7 +80,15 @@
                 prodDetailsDiv.id = "prodDetails-Div";
 
                 const prodImg = document.createElement("img");
-                prodImg.setAttribute('src', elem.image); // Field from joined products table
+                let cartImg = elem.image;
+                try {
+                    if (typeof cartImg === "string" && cartImg.startsWith("[")) {
+                        const parsed = JSON.parse(cartImg);
+                        cartImg = Array.isArray(parsed) && parsed.length > 0 ? parsed[0] : cartImg;
+                    }
+                } catch (e) { }
+                prodImg.setAttribute('src', cartImg || "../images/placeholder.jpg");
+                prodImg.setAttribute('onerror', "this.src='../images/placeholder.jpg'");
                 prodImg.className = "prodImage";
 
                 const qty_div = document.createElement("div");

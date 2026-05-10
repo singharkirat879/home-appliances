@@ -353,10 +353,21 @@ li a {
 
 /* Tablet (768px) */
 @media screen and (max-width: 768px) {
+  .ProductPage-Div {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100% !important;
+    border-right: none;
+    border-bottom: 3px solid lightgray;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
   #ProductPage {
-    width: 75vw;
-    margin-top: 8%;
+    width: 100% !important;
+    margin-top: 20px;
   }
 
   .prodContainer {
@@ -377,10 +388,6 @@ li a {
 
   .prodPrice {
     font-size: 16px;
-  }
-
-  #sidebar {
-    width: 20vw;
   }
 
   .discountTag {
@@ -424,7 +431,7 @@ li a {
   }
 
   #cart-count {
-    right: 32px !important;
+    right: -10px !important;
     font-size: 10px !important;
   }
 
@@ -435,14 +442,14 @@ li a {
 }
 
 /* Mobile (425px) */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   #sidebar {
-    display: none;
+    padding: 10px;
   }
 
   #ProductPage {
-    width: 100vw;
-    margin: 15% 0px;
+    width: 100%;
+    margin: 10px 0;
   }
 
   .ProductPage-Div {
@@ -451,41 +458,50 @@ li a {
   }
 
   .prodContainer {
-    width: 90%;
+    width: 95% !important; /* One card per row, much larger */
+    height: auto !important; /* Let it expand naturally */
+    padding: 20px;
   }
 
   .prodImage {
-    height: 130px;
+    height: 200px !important; /* Larger image */
   }
 
   .prodName {
-    font-size: 14px;
+    font-size: 20px !important; /* Much more visible */
+    height: auto !important;
+    margin: 15px 0;
   }
 
   .prodDesc {
-    font-size: 12px;
+    font-size: 15px !important; /* Comfortable reading size */
+    height: auto !important;
+    max-height: 80px;
+    overflow: hidden;
+  }
+
+  .prodPrice {
+    font-size: 24px !important;
   }
 
   .priceContainer {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row !important; /* Keep horizontal if possible */
+    justify-content: center;
+    gap: 15px;
   }
 
   .discountTag {
-    font-size: 10px;
-    padding: 3px;
+    font-size: 14px !important;
   }
 
   .buttonsDiv {
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    margin-top: 20px;
+    gap: 10px;
   }
 
-
-  .card-buy-btn {
-    width: 100%;
-    padding: 10px;
+  .card-buy-btn, .card-buy-now-btn {
+    padding: 15px !important;
+    font-size: 16px !important;
   }
 
   .navbar-container {
@@ -514,11 +530,76 @@ li a {
   }
 
   #cart-count {
-    right: 32px !important;
+    right: -10px !important;
     font-size: 10px !important;
   }
 
   .categoryBtn {
     margin: 5px !important;
+  }
+}
+
+/* Mobile Filter UI */
+.mobile-filter-btn {
+  display: none;
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter-subtitle {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.category-filter-section {
+  margin-bottom: 25px;
+}
+
+.categoryBtn-Div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.categoryBtn {
+  margin: 0 !important;
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+}
+
+#filterPrice-Div, #filterRating-Div, #filterStock-Div {
+  margin-top: 20px;
+}
+
+#filterPrice, #filterRating, #filterStock {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-filter-btn {
+    display: flex;
+  }
+  
+  #sidebar {
+    display: none; /* Hidden by default on mobile */
+  }
+  
+  #sidebar.active {
+    display: block;
+    margin-bottom: 20px;
   }
 }

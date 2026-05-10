@@ -10,20 +10,27 @@ const requireAuth = (req, res, next) => {
 };
 
 // Checkout: Convert cart into an order
-router.post("/checkout", requireAuth, (req, res) => {
+router.post("/checkout", requireAuth, async (req, res) => {
   const userId = req.session.userId;
+  const promiseDb = db.promise();
   
-  // 1. Fetch current cart with validated prices
-  const cartQuery = `
-    SELECT c.product_id, c.quantity, p.price 
-    FROM cart_items c 
-    JOIN products p ON c.product_id = p.id 
-    WHERE c.user_id = ?
-  `;
-  
-  db.query(cartQuery, [userId], (err, cartItems) => {
-    if (err) return res.status(500).json({ error: "Failed to read cart" });
-    if (cartItems.length === 0) return res.status(400).json({ error: "Your cart is empty. Please add items to checkout." });
+  try {
+    await promiseDb.query('START TRANSACTION');
+
+    // 1. Fetch current cart with validated prices
+    const cartQuery = `
+      SELECT c.product_id, c.quantity, p.price 
+      FROM cart_items c 
+      JOIN products p ON c.product_id = p.id 
+      WHERE c.user_id = ?
+    `;
+    
+    const [cartItems] = await promiseDb.query(cartQuery, [userId]);
+    
+    if (cartItems.length === 0) {
+      await promiseDb.query('ROLLBACK');
+      return res.status(400).json({ error: "Your cart is empty. Please add items to checkout." });
+    }
     
     // 2. Mathematically calculate Secure Total Amount
     let totalAmount = 0;
@@ -33,64 +40,73 @@ router.post("/checkout", requireAuth, (req, res) => {
     
     // 3. Create Record in Orders
     const insertOrder = "INSERT INTO orders (user_id, total_amount, status) VALUES (?, ?, 'success')";
-    db.query(insertOrder, [userId, totalAmount], (err, orderResult) => {
-      if (err) return res.status(500).json({ error: "Failed to create final order receipt" });
-      
-      const orderId = orderResult.insertId;
-      
-      // 4. Record Snapshot of Order Items
-      const itemValues = cartItems.map(item => [orderId, item.product_id, item.quantity, item.price]);
-      const insertItemsQuery = "INSERT INTO order_items (order_id, product_id, quantity, price_at_purchase) VALUES ?";
-      
-      db.query(insertItemsQuery, [itemValues], (err) => {
-        if (err) return res.status(500).json({ error: "Failed to save individual order items" });
-        
-        // 5. Purge cart on success
-        db.query("DELETE FROM cart_items WHERE user_id = ?", [userId], (err) => {
-          if (err) console.error("Warning: Cart clear failed for user", userId);
-          return res.status(201).json({ message: "Order placed successfully!", orderId: orderId, totalAmount: totalAmount });
-        });
-      });
-    });
-  });
+    const [orderResult] = await promiseDb.query(insertOrder, [userId, totalAmount]);
+    const orderId = orderResult.insertId;
+    
+    // 4. Record Snapshot of Order Items
+    const itemValues = cartItems.map(item => [orderId, item.product_id, item.quantity, item.price]);
+    const insertItemsQuery = "INSERT INTO order_items (order_id, product_id, quantity, price_at_purchase) VALUES ?";
+    await promiseDb.query(insertItemsQuery, [itemValues]);
+    
+    // 5. Purge cart on success
+    await promiseDb.query("DELETE FROM cart_items WHERE user_id = ?", [userId]);
+    
+    await promiseDb.query('COMMIT');
+    return res.status(201).json({ message: "Order placed successfully!", orderId: orderId, totalAmount: totalAmount });
+    
+  } catch (error) {
+    await promiseDb.query('ROLLBACK');
+    console.error("Checkout Transaction Error:", error);
+    return res.status(500).json({ error: "Failed to process checkout" });
+  }
 });
 
 // Buy Now: Instant purchase of a single item
-router.post("/buy-now", requireAuth, (req, res) => {
+router.post("/buy-now", requireAuth, async (req, res) => {
   const userId = req.session.userId;
   const { productId } = req.body;
+  const promiseDb = db.promise();
 
   if (!productId) return res.status(400).json({ error: "Product ID required" });
 
-  // 1. Fetch product and check stock
-  db.query("SELECT * FROM products WHERE id = ?", [productId], (err, pRes) => {
-    if (err || pRes.length === 0) return res.status(404).json({ error: "Product not found" });
+  try {
+    await promiseDb.query('START TRANSACTION');
+
+    // 1. Fetch product and check stock
+    const [pRes] = await promiseDb.query("SELECT * FROM products WHERE id = ? FOR UPDATE", [productId]);
+    
+    if (pRes.length === 0) {
+      await promiseDb.query('ROLLBACK');
+      return res.status(404).json({ error: "Product not found" });
+    }
     const product = pRes[0];
 
-    if (product.stock < 1) return res.status(400).json({ error: "Out of stock!" });
+    if (product.stock < 1) {
+      await promiseDb.query('ROLLBACK');
+      return res.status(400).json({ error: "Out of stock!" });
+    }
 
     // 2. Create Order Record
     const totalAmount = parseFloat(product.price);
     const insertOrder = "INSERT INTO orders (user_id, total_amount, status) VALUES (?, ?, 'success')";
-    
-    db.query(insertOrder, [userId, totalAmount], (err, orderResult) => {
-      if (err) return res.status(500).json({ error: "Failed to create order" });
-      
-      const orderId = orderResult.insertId;
+    const [orderResult] = await promiseDb.query(insertOrder, [userId, totalAmount]);
+    const orderId = orderResult.insertId;
 
-      // 3. Create Order Item Snapshot
-      const insertItem = "INSERT INTO order_items (order_id, product_id, quantity, price_at_purchase) VALUES (?, ?, 1, ?)";
-      db.query(insertItem, [orderId, productId, product.price], (err) => {
-        if (err) return res.status(500).json({ error: "Failed to save order item" });
+    // 3. Create Order Item Snapshot
+    const insertItem = "INSERT INTO order_items (order_id, product_id, quantity, price_at_purchase) VALUES (?, ?, 1, ?)";
+    await promiseDb.query(insertItem, [orderId, productId, product.price]);
 
-        // 4. Deduct Stock
-        db.query("UPDATE products SET stock = stock - 1 WHERE id = ?", [productId], (err) => {
-          if (err) console.error("Warning: Stock deduction failed for Buy Now", productId);
-          return res.status(201).json({ message: "Order placed successfully!", orderId: orderId, totalAmount: totalAmount });
-        });
-      });
-    });
-  });
+    // 4. Deduct Stock
+    await promiseDb.query("UPDATE products SET stock = stock - 1 WHERE id = ?", [productId]);
+
+    await promiseDb.query('COMMIT');
+    return res.status(201).json({ message: "Order placed successfully!", orderId: orderId, totalAmount: totalAmount });
+
+  } catch (error) {
+    await promiseDb.query('ROLLBACK');
+    console.error("Buy Now Transaction Error:", error);
+    return res.status(500).json({ error: "Failed to process Buy Now order" });
+  }
 });
 
 // GET Order History structured data

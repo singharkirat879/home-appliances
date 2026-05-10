@@ -129,3 +129,122 @@
 body {
     padding-top: 71px !important;
 }
+
+/* Custom Tooltip */
+.nav-tooltip {
+    position: fixed;
+    background: #1e293b;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 2000;
+    transform: translateX(-50%) translateY(5px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    white-space: nowrap;
+}
+
+.nav-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    background: #1e293b;
+}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    #inputSearchProd {
+        width: 200px;
+    }
+    #user-credits {
+        gap: 15px;
+    }
+    #username-display {
+        display: none; /* Hide text to save space */
+    }
+    .navbar-container {
+        padding: 10px 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    #inputSearchProd {
+        width: 140px;
+    }
+    #logo-Img {
+        height: 35px !important;
+    }
+    #user-credits {
+        gap: 10px;
+    }
+}
+
+/* Custom Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    animation: modalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalPop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #1e293b;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.modal-content .cta-btn {
+    width: 100%;
+}
+
